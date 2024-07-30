@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node node_modules/@stihl-design-system/components/partials/copyAssets.js --dir=src/app --mode=nextWithAppRouter",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
