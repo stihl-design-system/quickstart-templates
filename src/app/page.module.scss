@@ -11,6 +11,11 @@
 .top-bar-content {
   @include ds-grid-main-column;
 }
+.logo {
+  // makes the focus of the logo visible at the top and bottom
+  z-index: 2;
+  position:relative;
+}
 
 .hero {
   @include ds-grid;

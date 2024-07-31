@@ -6,8 +6,7 @@ import {
   DSInput,
   DSLogo,
   DSRadioGroup,
-  DSText,
-  DSTitle,
+  DSTitle
 } from '@stihl-design-system/components';
 import styles from './page.module.scss';
 
@@ -17,7 +16,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles['top-bar']}>
           <div className={styles['top-bar-content']}>
-            <DSLogo href='/' variant="background"/>
+            <DSLogo href='/' variant="background" className={styles.logo}/>
           </div>
         </div>
         <section className={styles['hero']}>
