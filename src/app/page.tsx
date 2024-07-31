@@ -17,7 +17,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles['top-bar']}>
           <div className={styles['top-bar-content']}>
-            <DSLogo href='/' />
+            <DSLogo href='/' variant="background"/>
           </div>
         </div>
         <section className={styles['hero']}>
