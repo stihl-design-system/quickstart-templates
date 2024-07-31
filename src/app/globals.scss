@@ -1,1 +1,13 @@
 @import '@stihl-design-system/components/styles/fonts';
+
+body {
+  display: flex;
+  flex-direction: column;
+  // body has a min-height of 100vh so that footer is at the bottom
+  min-height: 100vh;
+}
+
+main {
+  // make main content grow so that footer is at the bottom
+  flex: 1;
+}
