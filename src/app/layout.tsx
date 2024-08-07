@@ -6,6 +6,7 @@ import {
   DSAriaLiveRegions,
   DSHeading,
   DSLinkStandalone,
+  DSSkipToContent,
 } from '@stihl-design-system/components';
 
 export const metadata: Metadata = {
@@ -23,9 +24,9 @@ export default function RootLayout({
     <html lang='en'>
       <head>{getResetStyles()}</head>
       <body>
-        {/* <DSSkipToContentLink /> */}
+        <DSSkipToContent />
         <DSAriaLiveRegions />
-        <main>{children}</main>
+        <main id='main'>{children}</main>
         <footer className={styles.footer}>
           <div className={styles['footer-content']}>
             <div className='footer-col'>
