@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.scss';
 import { getResetStyles } from '@stihl-design-system/components/partials';
-import styles from './layout.module.scss';
 import {
   DSAriaLiveRegions,
-  DSHeading,
-  DSLinkStandalone,
+  DSSkipToContent,
 } from '@stihl-design-system/components';
+import { Header } from '../components/Header/Header';
+import { Footer } from '../components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'STIHL Quickstart Template',
@@ -23,64 +23,20 @@ export default function RootLayout({
     <html lang='en'>
       <head>{getResetStyles()}</head>
       <body>
-        {/* <DSSkipToContentLink /> */}
+        {/* 
+          Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" /> 
+          See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-skip-to-content-link--documentation
+        */}
+        <DSSkipToContent />
+
+        {/*
+          Aria live regions component to announce updates to screen readers. (used by components like DSToast)
+          See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-toast--documentation#live-regions
+        */}
         <DSAriaLiveRegions />
-        <main>{children}</main>
-        <footer className={styles.footer}>
-          <div className={styles['footer-content']}>
-            <div className='footer-col'>
-              <DSHeading tag='h2'>Heading 2</DSHeading>
-              <nav>
-                <ul>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className='footer-col'>
-              <DSHeading tag='h2'>Heading 2</DSHeading>
-              <nav>
-                <ul>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className='footer-col'>
-              <DSHeading tag='h2'>Heading 2</DSHeading>
-              <nav>
-                <ul>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                  <li>
-                    <DSLinkStandalone href='#'>
-                      Standalone Link
-                    </DSLinkStandalone>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </footer>
+        <Header />
+        <main id='main'>{children}</main>
+        <Footer />
       </body>
     </html>
   );

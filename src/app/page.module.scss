@@ -1,71 +1,13 @@
 @import '@stihl-design-system/components/styles/scss';
 
-.top-bar {
-  @include ds-grid-full-column;
-  @include ds-grid;
-  width: 100vw;
-  min-height: max-content;
-  background: $ds-color-core-grey-mid;
-}
-
-.top-bar-content {
-  @include ds-grid-main-column;
-}
-.logo {
-  // makes the focus of the logo visible at the top and bottom
-  z-index: 2;
-  position:relative;
-}
-
-.hero {
-  @include ds-grid;
-  width: 100vw;
-}
-
-.hero-image {
-  @include ds-grid-extended-column;
-  background-image: url(/header-bg.png);
-  background-size: cover;
-  background-position: bottom center;
-  height: 200px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-.hero-image-title {
-  @include ds-grid-main-column;
-  background: white;
-  width: 100%;
-  margin-block-start: auto;
-  margin-block-end: $ds-spacing-24;
-  @include ds-media-query-min('m') {
-    margin-block-end: $ds-spacing-32;
-  }
-  @include ds-media-query-min('xl') {
-    margin-block-end: $ds-spacing-40;
-  }
-
-  padding-block: $ds-spacing-16;
-  padding-inline: $ds-spacing-16;
-  @include ds-media-query-min('m') {
-    padding-block: $ds-spacing-24;
-    padding-inline: $ds-spacing-24;
-  }
-  @include ds-media-query-min('xl') {
-    padding-block: $ds-spacing-32;
-    padding-inline: $ds-spacing-32;
-  }
-}
-
-.title {
-  @include ds-grid-narrow-left-column;
-}
-
 .content {
   @include ds-grid;
 
   padding-block: $ds-spacing-32;
+}
+
+.title {
+  @include ds-grid-narrow-left-column;
 }
 
 .form {
