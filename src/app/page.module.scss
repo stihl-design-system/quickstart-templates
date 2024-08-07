@@ -1,101 +1,13 @@
 @import '@stihl-design-system/components/styles/scss';
 
-.top-bar {
-  @include ds-grid-full-column;
-  @include ds-grid;
-  width: 100vw;
-  min-height: max-content;
-  background: $ds-color-core-grey-mid;
-}
-
-.top-bar-content {
-  @include ds-grid-main-column;
-}
-.logo {
-  // makes the focus of the logo visible at the top and bottom
-  z-index: 2;
-  position: relative;
-}
-
-.hero {
-  @include ds-grid;
-  width: 100vw;
-}
-
-.hero-image {
-  @include ds-grid-extended-column;
-
-  // Default mobile background image for browsers that do not support image-set.
-  background-image: url(/hero-mobile-bg.jpg);
-  // The images are optimized in size for mobile devices.
-  // Using image-set to provide multiple image formats and resolutions for the mobile background.
-  // This allows the browser to choose the best-supported format and resolution.
-  // 2x resolution images are used for high-density displays (e.g. Retina displays - add 3x if necessary).
-  background-image: image-set(
-    url(/hero-bg-mobile.avif) type('image/avif') 1x,
-    url(/hero-bg-mobile@2x.avif) type('image/avif') 2x,
-    url(/hero-bg-mobile.webp) type('image/webp') 1x,
-    url(/hero-bg-mobile@2x.webp) type('image/webp') 2x,
-    url(/hero-bg-mobile.jpg) type('image/jpeg') 1x,
-    url(/hero-bg-mobile@2x.jpg) type('image/jpeg') 2x
-  );
-
-  // Ensures the background image covers the entire element.
-  background-size: cover;
-  // Positions the background image at the center of the element.
-  background-position: center center;
-  height: 200px;
-  width: 100%;
-  display: grid;
-  // Using subgrid to inherit the grid layout from the parent element.
-  grid-template-columns: subgrid;
-
-  // Media query for minimum screen size defined by ds-media-query-min('m') mixin.
-  @include ds-media-query-min('m') {
-    // Default background image for larger screens as a fallback.
-    background-image: url(/hero-bg.jpg);
-    // Using image-set to provide multiple supported image formats for larger screens.
-    background-image: image-set(
-      url(/hero-bg.avif) type('image/avif'),
-      url(/hero-bg.webp) type('image/webp'),
-      url(/hero-bg.jpg) type('image/jpeg')
-    );
-  }
-}
-
-.hero-image-title {
-  @include ds-grid-main-column;
-  background: white;
-  width: 100%;
-  margin-block-start: auto;
-  margin-block-end: $ds-spacing-24;
-  @include ds-media-query-min('m') {
-    margin-block-end: $ds-spacing-32;
-  }
-  @include ds-media-query-min('xl') {
-    margin-block-end: $ds-spacing-40;
-  }
-
-  padding-block: $ds-spacing-16;
-  padding-inline: $ds-spacing-16;
-  @include ds-media-query-min('m') {
-    padding-block: $ds-spacing-24;
-    padding-inline: $ds-spacing-24;
-  }
-  @include ds-media-query-min('xl') {
-    padding-block: $ds-spacing-32;
-    padding-inline: $ds-spacing-32;
-  }
-}
-
-.title {
-  @include ds-grid-narrow-left-column;
-}
-
 .content {
   @include ds-grid;
 
   padding-block: $ds-spacing-32;
+}
+
+.title {
+  @include ds-grid-narrow-left-column;
 }
 
 .form {
