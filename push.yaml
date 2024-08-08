@@ -1,0 +1,81 @@
+name: Build and Deploy Quickstart Template
+on:
+  push:
+    branches:
+      - main
+      - develop
+env:
+  NODE_VERSION: 20.16.0
+jobs:
+  lint:
+    name: Linter 👕
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install
+        run: | # Install npm packages
+          npm ci
+      - name: Run Linter 👕
+        run: |
+          npm run lint
+  a11y-tests:
+    name: a11y Tests 🦾
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install
+        run: | # Install npm packages
+          npm ci && npx playwright install --with-deps
+      - name: Build 🔧
+        run: npm run build
+      - name: Run a11y tests 🦾
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npm run start" \
+            "npx wait-on tcp:127.0.0.1:3000 && npm run test:a11y"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: a11y-results
+          path: playwright/a11y-results/
+          retention-days: 30
+  build-and-deploy-quickstart-template:
+    needs:
+      - lint
+      - a11y-tests
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install
+        run: | # Install npm packages
+          npm ci
+      - name: Build 🔧
+        run: npm run build
+      - name: Store Build Artifact 📥
+        uses: actions/upload-artifact@v4
+        with:
+          name: quickstart-template
+          path: ./out
+          retention-days: 30
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
+          clean: true # Automatically remove deleted files from the deploy branch
+
