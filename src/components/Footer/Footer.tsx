@@ -7,7 +7,7 @@ export function Footer() {
       <div className={styles['footer-content']}>
         <div className='footer-col'>
           <DSHeading tag='h2'>Heading 2</DSHeading>
-          <nav>
+          <nav aria-label='Heading 2 Start Navigation'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
@@ -20,7 +20,7 @@ export function Footer() {
         </div>
         <div className='footer-col'>
           <DSHeading tag='h2'>Heading 2</DSHeading>
-          <nav>
+          <nav aria-label='Heading 2 Middle Navigation'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div className='footer-col'>
           <DSHeading tag='h2'>Heading 2</DSHeading>
-          <nav>
+          <nav aria-label='Heading 2 End Navigation'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
