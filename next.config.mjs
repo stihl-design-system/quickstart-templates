@@ -2,8 +2,10 @@
 const nextConfig = {
   // GitHub Pages specific settings
   output: 'export',
-  // adjust GitHub Pages base path for favicon etc
-  basePath: '/quickstart-templates',
 };
 
+if (process.env.NODE_ENV === 'production') {
+  // adjust GitHub Pages base path for favicon etc
+  nextConfig.basePath = '/quickstart-templates';
+}
 export default nextConfig;
