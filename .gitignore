@@ -12,6 +12,7 @@
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/playwright/a11y-results/.last-run.json
 
 # next.js
 /.next/
