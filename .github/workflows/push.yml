@@ -77,11 +77,9 @@ jobs:
       - name: Build 🔧
         run: npm run build
       - name: Store Build Artifact 📥
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: quickstart-template
           path: ./out
-          retention-days: 30
       - name: Publish to GitHub Pages 🚀
         id: deployment
         uses: actions/deploy-pages@v4
