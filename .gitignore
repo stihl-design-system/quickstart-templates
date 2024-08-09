@@ -12,7 +12,8 @@
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/playwright/a11y-results/.last-run.json
+/playwright/a11y-results/
+/playwright/vrt-results/
 
 # next.js
 /.next/

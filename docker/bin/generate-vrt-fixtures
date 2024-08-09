@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+echo "task: [$(date)] installing dependencies"
+
+npm ci
+
+echo "task: [$(date)] finished installing dependencies"
+
+echo "task: [$(date)] building quickstart-templates"
+
+npm run build
+
+echo "task: [$(date)] running visual regression tests"
+
+
+npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+    "npm run start" \
+    "npx wait-on tcp:127.0.0.1:3000 && npm run test:vrt"
+
+echo "task: [$(date)] finished running visual regression tests"

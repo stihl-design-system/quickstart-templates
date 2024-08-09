@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "serve out",
     "lint": "next lint",
-    "test:a11y": "npx playwright test --config=playwright.config.a11y.ts"
+    "test:a11y": "npx playwright test --config=playwright.config.a11y.ts",
+    "test:vrt": "npx playwright test --config=playwright.config.vrt.ts"
   },
   "dependencies": {
     "@stihl-design-system/components": "^1.0.0-RC.7",
