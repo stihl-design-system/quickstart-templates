@@ -6,7 +6,11 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles['top-bar']}>
         <div className={styles['top-bar-content']}>
-          <DSLogo href='/' variant='background' className={styles.logo} />
+          <DSLogo
+            href='/quickstart-templates'
+            variant='background'
+            className={styles.logo}
+          />
         </div>
       </div>
       <section className={styles['hero']}>
