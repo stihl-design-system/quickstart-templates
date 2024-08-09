@@ -21,7 +21,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <head>{getResetStyles()}</head>
+      <head>
+        {
+          // Include the global reset styles from the STIHL design system.
+          getResetStyles()
+
+          /**
+           * Next.js 14.x currently sets the manifest path incorrectly when using a "basePath".
+           * Since we are using a basePath to deploy this example page to GitHub Pages, the
+           * path to the manifest.webmanifest file is incorrect and the browser will not be able to
+           * find it. This will cause the browser to throw an 404 error in the console.
+           *
+           * See the following issue for more information: https://github.com/vercel/next.js/issues/56687
+           */
+        }
+      </head>
       <body>
         {/* 
           Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" /> 
