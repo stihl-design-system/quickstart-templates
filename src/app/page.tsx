@@ -3,6 +3,7 @@ import {
   DSCheckbox,
   DSFieldset,
   DSInput,
+  DSNotification,
   DSRadioGroup,
   DSTitle,
 } from '@stihl-design-system/components';
@@ -23,6 +24,9 @@ export default function Home() {
           }}
           className={styles.fieldset}
         >
+          <DSNotification hideCloseButton>
+            This is an example inline notification.
+          </DSNotification>
           <DSCheckbox name='business' label='I am a business client' />
           <DSRadioGroup
             legend='Title'
