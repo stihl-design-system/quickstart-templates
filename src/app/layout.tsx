@@ -4,6 +4,7 @@ import { getResetStyles } from '@stihl-design-system/components/partials';
 import {
   DSAriaLiveRegions,
   DSSkipToContent,
+  DSToastProvider,
 } from '@stihl-design-system/components';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
@@ -38,19 +39,25 @@ export default function RootLayout({
       </head>
       <body>
         {/* 
+          The DSToastProvider must wrap the application whenever useDSToast() is utilized.
+          See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-toast--documentation
+        */}
+        <DSToastProvider>
+          {/* 
           Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" /> 
           See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-skip-to-content-link--documentation
         */}
-        <DSSkipToContent />
+          <DSSkipToContent />
 
-        {/*
+          {/*
           Aria live regions component to announce updates to screen readers. (used by components like DSToast)
           See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-toast--documentation#live-regions
         */}
-        <DSAriaLiveRegions />
-        <Header />
-        <main id='main'>{children}</main>
-        <Footer />
+          <DSAriaLiveRegions />
+          <Header />
+          <main id='main'>{children}</main>
+          <Footer />
+        </DSToastProvider>
       </body>
     </html>
   );

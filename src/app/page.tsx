@@ -1,3 +1,5 @@
+'use client';
+
 import {
   DSButton,
   DSCheckbox,
@@ -6,16 +8,28 @@ import {
   DSNotification,
   DSRadioGroup,
   DSTitle,
+  useDSToast,
 } from '@stihl-design-system/components';
 import styles from './page.module.scss';
 
 export default function Home() {
+  const { queueDSToastMessage } = useDSToast();
+
+  function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    // Display a DSToast message when the form is submitted.
+    queueDSToastMessage('Form has been submitted!', {
+      variant: 'success',
+    });
+  }
+
   return (
     <section className={styles.content}>
       <DSTitle className={styles.title} tag='h1'>
         Heading 1
       </DSTitle>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleFormSubmit}>
         <DSFieldset
           legend={{
             headingText: 'Heading 2',
