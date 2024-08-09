@@ -25,6 +25,12 @@
 .hero-image {
   @include ds-grid-extended-column;
 
+  // **************************************************************
+  // IMPORTANT: We need to hardcode the basePath to /quickstart-templates
+  // to ensure the image paths are correct when deploying to our GitHub Pages.
+  // Please adjust the image paths to match your project structure.
+  // **************************************************************
+
   // Default mobile background image for browsers that do not support image-set.
   background-image: url(/quickstart-templates/hero-mobile-bg.jpg);
   // The images are optimized in size for mobile devices.
