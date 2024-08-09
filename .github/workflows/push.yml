@@ -41,7 +41,7 @@ jobs:
         run: | # Install npm packages
           npm ci && npx playwright install --with-deps
       - name: Build for A11Y tests 🔧
-        run: npm run build:a11y
+        run: npm run build
       - name: Run a11y tests 🦾
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
