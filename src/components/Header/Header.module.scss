@@ -39,11 +39,11 @@
   // 2x resolution images are used for high-density displays (e.g. Retina displays - add 3x if necessary).
   background-image: image-set(
     url(/quickstart-templates/hero-bg-mobile.avif) type('image/avif') 1x,
-    url(/quickstart-templates/hero-bg-mobile@2x.avif) type('image/avif') 2x,
+    url(/quickstart-templates/hero-bg-mobile_2x.avif) type('image/avif') 2x,
     url(/quickstart-templates/hero-bg-mobile.webp) type('image/webp') 1x,
-    url(/quickstart-templates/hero-bg-mobile@2x.webp) type('image/webp') 2x,
+    url(/quickstart-templates/hero-bg-mobile_2x.webp) type('image/webp') 2x,
     url(/quickstart-templates/hero-bg-mobile.jpg) type('image/jpeg') 1x,
-    url(/quickstart-templates/hero-bg-mobile@2x.jpg) type('image/jpeg') 2x
+    url(/quickstart-templates/hero-bg-mobile_2x.jpg) type('image/jpeg') 2x
   );
 
   // Ensures the background image covers the entire element.
