@@ -14,6 +14,7 @@
   @include ds-grid-narrow-left-column;
 }
 
-.submit-button {
+.actions {
+  display: flex;
   margin-block-start: $ds-spacing-24;
 }

@@ -8,28 +8,16 @@ import {
   DSNotification,
   DSRadioGroup,
   DSTitle,
-  useDSToast,
 } from '@stihl-design-system/components';
 import styles from './page.module.scss';
 
 export default function Home() {
-  const { queueDSToastMessage } = useDSToast();
-
-  function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    // Display a DSToast message when the form is submitted.
-    queueDSToastMessage('Form has been submitted!', {
-      variant: 'success',
-    });
-  }
-
   return (
     <section className={styles.content}>
       <DSTitle className={styles.title} tag='h1'>
         Heading 1
       </DSTitle>
-      <form className={styles.form} onSubmit={handleFormSubmit}>
+      <form className={styles.form}>
         <DSFieldset
           legend={{
             headingText: 'Heading 2',
@@ -68,7 +56,9 @@ export default function Home() {
             autoComplete='family-name'
           />
         </DSFieldset>
-        <DSButton className={styles['submit-button']}>Button</DSButton>
+        <div className={styles.actions}>
+          <DSButton variant='filled'>Button</DSButton>
+        </div>
       </form>
     </section>
   );
