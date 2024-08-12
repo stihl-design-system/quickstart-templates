@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import { createHtmlReport } from 'axe-html-reporter';
 
-const PAGES_TO_TEST = ['/quickstart-templates'];
+const PAGES_TO_TEST = ['/'];
 
 test.describe('Next.js App Accessibility Tests', () => {
   for (const pagePath of PAGES_TO_TEST) {

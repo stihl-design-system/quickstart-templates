@@ -41,7 +41,7 @@ jobs:
         run: | # Install npm packages
           npm ci && npx playwright install --with-deps
       - name: Build for A11Y tests 🔧
-        run: npm run build
+        run: npm run build:test
       - name: Run a11y tests 🦾
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
@@ -69,8 +69,8 @@ jobs:
         run: | # Install npm packages and playwright browsers
           npm ci && npx playwright install --with-deps
       - name: Build 🔧
-        run: | # Build for VRT
-          npm run build:vrt
+        run: | # Build for tests
+          npm run build:test
       - name: Run Visual Regression Tests 👀
         run:
           | # HOME=/root is needed here to fix firefox issues https://github.com/microsoft/playwright/issues/6500
