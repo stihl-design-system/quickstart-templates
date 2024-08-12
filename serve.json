@@ -1,0 +1,15 @@
+{
+  "public": "out",
+  "redirects": [
+    {
+      "source": "/quickstart-templates/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/_next/static/css/_next/static/media/:path*",
+      "destination": "/_next/static/media/:path*",
+      "permanent": true
+    }
+  ]
+}

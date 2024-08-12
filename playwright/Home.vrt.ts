@@ -45,7 +45,7 @@ export const takeScreenshot = async (
 
 test('visual regression test for homepage', async ({ page }, { title }) => {
   // Navigate to the page you want to test
-  await page.goto('http://localhost:3000/quickstart-templates', {
+  await page.goto('http://localhost:3000', {
     waitUntil: 'networkidle',
   });
 

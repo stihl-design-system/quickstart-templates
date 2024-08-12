@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "node node_modules/@stihl-design-system/components/partials/copyAssets.js --dir=src/app --mode=nextWithAppRouter",
     "build": "next build",
-    "start": "serve out",
+    "start": "serve -c serve.json",
     "lint": "next lint",
     "test:a11y": "npx playwright test --config=playwright.config.a11y.ts",
     "test:vrt": "npx playwright test --config=playwright.config.vrt.ts"
