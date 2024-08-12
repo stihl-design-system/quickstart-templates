@@ -26,24 +26,24 @@
   @include ds-grid-extended-column;
 
   // **************************************************************
-  // IMPORTANT: We need to hardcode the basePath to
+  // IMPORTANT: We need to hardcode the basePath to /quickstart-templates
   // to ensure the image paths are correct when deploying to our GitHub Pages.
   // Please adjust the image paths to match your project structure.
   // **************************************************************
 
   // Default mobile background image for browsers that do not support image-set.
-  background-image: url(/hero-mobile-bg.jpg);
+  background-image: url(/quickstart-templates/hero-mobile-bg.jpg);
   // The images are optimized in size for mobile devices.
   // Using image-set to provide multiple image formats and resolutions for the mobile background.
   // This allows the browser to choose the best-supported format and resolution.
   // 2x resolution images are used for high-density displays (e.g. Retina displays - add 3x if necessary).
   background-image: image-set(
-    url(/hero-bg-mobile.avif) type('image/avif') 1x,
-    url(/hero-bg-mobile@2x.avif) type('image/avif') 2x,
-    url(/hero-bg-mobile.webp) type('image/webp') 1x,
-    url(/hero-bg-mobile@2x.webp) type('image/webp') 2x,
-    url(/hero-bg-mobile.jpg) type('image/jpeg') 1x,
-    url(/hero-bg-mobile@2x.jpg) type('image/jpeg') 2x
+    url(/quickstart-templates/hero-bg-mobile.avif) type('image/avif') 1x,
+    url(/quickstart-templates/hero-bg-mobile@2x.avif) type('image/avif') 2x,
+    url(/quickstart-templates/hero-bg-mobile.webp) type('image/webp') 1x,
+    url(/quickstart-templates/hero-bg-mobile@2x.webp) type('image/webp') 2x,
+    url(/quickstart-templates/hero-bg-mobile.jpg) type('image/jpeg') 1x,
+    url(/quickstart-templates/hero-bg-mobile@2x.jpg) type('image/jpeg') 2x
   );
 
   // Ensures the background image covers the entire element.
@@ -59,12 +59,12 @@
   // Media query for minimum screen size defined by ds-media-query-min('m') mixin.
   @include ds-media-query-min('m') {
     // Default background image for larger screens as a fallback.
-    background-image: url(/hero-bg.jpg);
+    background-image: url(/quickstart-templates/hero-bg.jpg);
     // Using image-set to provide multiple supported image formats for larger screens.
     background-image: image-set(
-      url(/hero-bg.avif) type('image/avif'),
-      url(/hero-bg.webp) type('image/webp'),
-      url(/hero-bg.jpg) type('image/jpeg')
+      url(/quickstart-templates/hero-bg.avif) type('image/avif'),
+      url(/quickstart-templates/hero-bg.webp) type('image/webp'),
+      url(/quickstart-templates/hero-bg.jpg) type('image/jpeg')
     );
   }
 }
