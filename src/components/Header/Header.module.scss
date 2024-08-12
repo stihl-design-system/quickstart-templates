@@ -1,28 +1,48 @@
 @import '@stihl-design-system/components/styles/scss';
 
+// **************************************************************
+// The STIHL Design System Grid mixin is used in this example app.
+// It is based on the native CSS Grid and provides a simple way to create
+// responsive grid layouts.
+// The STIHL Design System Grid is built to be used in a standard "row-based" layout
+// where every row is a grid container and every column is a grid item.
+// This allows developers to create complex, responsive layouts while maintaining
+// a clear and modular structure.
+// This example app demonstrates the usage of the STIHL Design System Grid.
+// See full documentation for the STIHL Design System Grid at:
+// https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/styles-grid-grid--documentation
+// **************************************************************
 .top-bar {
-  @include ds-grid-full-column;
+  // Initializes the grid layout for the top bar container.
+  // This enables us to place the contents inside the top bar along
+  // the predefined grid areas.
   @include ds-grid;
+
+  // DO WE NEED THIS? width is already set to 100vw ?
+  @include ds-grid-full-column;
+  // And this?! width is automatically set to 100% ?
   width: 100vw;
   min-height: max-content;
   background: $ds-color-core-grey-mid;
 }
 
 .top-bar-content {
+  // Sets the top-bar-content element to be a main content area
+  // by using the predefined grid area 'main'.
   @include ds-grid-main-column;
-}
-.logo {
-  // makes the focus of the logo visible at the top and bottom
-  z-index: 2;
-  position: relative;
 }
 
 .hero {
+  // Initializes the grid layout for the top bar container.
+  // This enables us to place the contents inside the hero section along
+  // the predefined grid areas.
   @include ds-grid;
-  width: 100vw;
 }
 
 .hero-image {
+  // To span the hero image section across the full width of the
+  // predefined "extended area", we use the ds-grid-extended-column mixin.
+  // Extended columns are wider than the main columns but not full viewport width.
   @include ds-grid-extended-column;
 
   // **************************************************************
@@ -51,9 +71,9 @@
   // Positions the background image at the center of the element.
   background-position: center center;
   height: 200px;
-  width: 100%;
-  display: grid;
+
   // Using subgrid to inherit the grid layout from the parent element.
+  display: grid;
   grid-template-columns: subgrid;
 
   // Media query for minimum screen size defined by ds-media-query-min('m') mixin.
@@ -70,6 +90,8 @@
 }
 
 .hero-image-title {
+  // Sets the white hero-image-title wrapper to be a main content area
+  // by using the predefined grid area 'main'.
   @include ds-grid-main-column;
   background: white;
   width: 100%;

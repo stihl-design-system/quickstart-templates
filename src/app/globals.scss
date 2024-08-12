@@ -3,11 +3,11 @@
 body {
   display: flex;
   flex-direction: column;
-  // body has a min-height of 100vh so that footer is at the bottom
+  // body has a min-height of 100vh so that footer is at the bottom of the page
   min-height: 100vh;
 }
 
 main {
-  // make main content grow so that footer is at the bottom
+  // make main content grow so that footer is always at the bottom of the page
   flex: 1;
 }
