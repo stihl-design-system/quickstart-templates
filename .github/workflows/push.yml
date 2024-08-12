@@ -87,6 +87,7 @@ jobs:
     needs:
       - lint
       - a11y-tests
+      - vrt-playwright
     if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
