@@ -25,8 +25,7 @@
 }
 
 .footer-content {
-  // Sets the footer-content element to be a main content area
-  // by using the predefined grid area 'main'.
+  // Places the footer-content element in the predefined 'main' column.
   @include ds-grid-main-column;
 
   display: flex;

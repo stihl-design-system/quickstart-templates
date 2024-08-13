@@ -4,11 +4,8 @@
 // The STIHL Design System Grid mixin is used in this example app.
 // It is based on the native CSS Grid and provides a simple way to create
 // responsive grid layouts.
-// The STIHL Design System Grid is built to be used in a standard "row-based" layout
+// The STIHL Design System Grid is built to be used in a standard 'row-based' layout
 // where every row is a grid container and every column is a grid item.
-// This allows developers to create complex, responsive layouts while maintaining
-// a clear and modular structure.
-// This example app demonstrates the usage of the STIHL Design System Grid.
 // See full documentation for the STIHL Design System Grid at:
 // https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/styles-grid-grid--documentation
 // **************************************************************
@@ -18,17 +15,12 @@
   // the predefined grid areas.
   @include ds-grid;
 
-  // DO WE NEED THIS? width is already set to 100vw ?
-  @include ds-grid-full-column;
-  // And this?! width is automatically set to 100% ?
-  width: 100vw;
   min-height: max-content;
   background: $ds-color-core-grey-mid;
 }
 
 .top-bar-content {
-  // Sets the top-bar-content element to be a main content area
-  // by using the predefined grid area 'main'.
+  // Places the top-bar-content element in the predefined 'main' column.
   @include ds-grid-main-column;
 }
 
@@ -41,7 +33,7 @@
 
 .hero-image {
   // To span the hero image section across the full width of the
-  // predefined "extended area", we use the ds-grid-extended-column mixin.
+  // predefined 'extended' area, we use the ds-grid-extended-column mixin.
   // Extended columns are wider than the main columns but not full viewport width.
   @include ds-grid-extended-column;
 
@@ -90,8 +82,7 @@
 }
 
 .hero-image-title {
-  // Sets the white hero-image-title wrapper to be a main content area
-  // by using the predefined grid area 'main'.
+  // Places the hero-image-title-wrapper element in the predefined 'main' column.
   @include ds-grid-main-column;
   background: white;
   width: 100%;
