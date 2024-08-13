@@ -1,9 +1,15 @@
 @import '@stihl-design-system/components/styles/scss';
 
 .footer {
+  // **************************************************************
+  // See /src/components/Header/Header.module.scss for more information
+  // about how to use the STIHL Design System Grid.
+  // **************************************************************
+
+  // Initializes the grid layout for the footer container.
+  // This enables us to place the contents inside the footer container
+  // along the predefined grid areas.
   @include ds-grid;
-  width: 100vw;
-  min-height: max-content;
   background: $ds-color-core-grey-light;
 
   ul {
@@ -19,6 +25,7 @@
 }
 
 .footer-content {
+  // Places the footer-content element in the predefined 'main' column.
   @include ds-grid-main-column;
 
   display: flex;
