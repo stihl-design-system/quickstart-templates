@@ -30,12 +30,17 @@
 .footer-content {
   // Places the footer-content element in the predefined 'main' column.
   @include ds-grid-main-column;
-
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
   padding-block: $ds-spacing-dynamic-l;
+
+  grid-template-columns: repeat(2, 1fr); // Two columns for mobile
+  grid-template-rows: repeat(2, 1fr); // Two rows for mobile
 
   column-gap: $ds-spacing-dynamic-xs;
   row-gap: $ds-spacing-24;
+
+  @include ds-media-query-min('m') {
+    grid-template-columns: repeat(4, 1fr); // Four columns for larger screens
+    grid-template-rows: 1fr; // Single row for larger screens
+  }
 }
