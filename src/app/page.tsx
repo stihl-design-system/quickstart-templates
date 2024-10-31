@@ -8,21 +8,12 @@ import {
   DSInput,
   DSNotification,
   DSRadioGroup,
-  DSText,
 } from '@stihl-design-system/components';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <section className={styles.content}>
-      <DSText>
-        Lorem ipsum dolor sit amet consectetur. Eget sollicitudin tellus id arcu
-        sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
-        vehicula sit ultrices. Eu leo sit duis blandit. Volutpat amet amet augue
-        ipsum eu felis sit. Cursus sit odio porttitor convallis venenatis
-        faucibus neque massa porttitor. Facilisis volutpat elementum in eu.
-        Fringilla et non tellus proin. Mauris tempus placerat fringilla ut.
-      </DSText>
       <DSHeading className={styles.title} tag='h2' size='large-uppercase'>
         Heading 2
       </DSHeading>
