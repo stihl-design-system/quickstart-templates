@@ -1,13 +1,13 @@
 @import '@stihl-design-system/components/styles/scss';
 
-.content {
+.section {
   // **************************************************************
   // See /src/components/Header/Header.module.scss for more information
   // about how to use the STIHL Design System Grid.
   // **************************************************************
 
-  // Initializes the grid layout for the content container.
-  // This enables us to place the contents inside the content container
+  // Initializes the grid layout for the section container.
+  // This enables us to place the content inside the section container
   // along the predefined grid areas.
   @include ds-grid;
 
@@ -20,8 +20,8 @@
   @include ds-grid-narrow-left-column;
 }
 
-.form {
-  // Places the form wrapper in the predefined "narrow-left" column.
+.content {
+  // Places the content in the predefined "narrow-left" column.
   @include ds-grid-narrow-left-column;
 }
 
