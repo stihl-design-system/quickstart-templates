@@ -33,7 +33,7 @@ export default function Home() {
           <DSRadioGroup
             legend='Title'
             name='title'
-            alignment='horizontal'
+            direction='horizontal'
             options={[
               { value: 'mr', label: 'Mr.' },
               { value: 'mrs', label: 'Mrs.' },
