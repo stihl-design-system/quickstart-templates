@@ -2,27 +2,36 @@
 
 import {
   DSButton,
+  DSHeading,
   DSCheckbox,
   DSFieldset,
   DSInput,
   DSNotification,
   DSRadioGroup,
-  DSTitle,
+  DSText,
 } from '@stihl-design-system/components';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <section className={styles.content}>
-      <DSTitle className={styles.title} tag='h1'>
-        Heading 1
-      </DSTitle>
+      <DSText>
+        Lorem ipsum dolor sit amet consectetur. Eget sollicitudin tellus id arcu
+        sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
+        vehicula sit ultrices. Eu leo sit duis blandit. Volutpat amet amet augue
+        ipsum eu felis sit. Cursus sit odio porttitor convallis venenatis
+        faucibus neque massa porttitor. Facilisis volutpat elementum in eu.
+        Fringilla et non tellus proin. Mauris tempus placerat fringilla ut.
+      </DSText>
+      <DSHeading className={styles.title} tag='h2' size='large-uppercase'>
+        Heading 2
+      </DSHeading>
       <form className={styles.form}>
         <DSFieldset
           legend={{
-            headingText: 'Heading 2',
+            headingText: 'Fieldset Heading 2',
             headingTag: 'h2',
-            headingSize: 'large-uppercase',
+            headingSize: 'large',
           }}
           className={styles.fieldset}
         >

@@ -21,7 +21,13 @@
 
 .top-bar-content {
   // Places the top-bar-content element in the predefined 'main' column.
-  @include ds-grid-main-column;
+  @include ds-media-query-max('l') {
+    @include ds-grid-extended-column;
+  }
+
+  @include ds-media-query-min('l') {
+    @include ds-grid-main-column;
+  }
 }
 
 .hero {
@@ -62,7 +68,7 @@
   background-size: cover;
   // Positions the background image at the center of the element.
   background-position: center center;
-  height: 200px;
+  height: 240px;
 
   // Using subgrid to inherit the grid layout from the parent element.
   display: grid;
@@ -78,6 +84,11 @@
       url(/quickstart-templates/hero-bg.webp) type('image/webp'),
       url(/quickstart-templates/hero-bg.jpg) type('image/jpeg')
     );
+    height: 280px;
+  }
+
+  @include ds-media-query-min('l') {
+    height: 420px;
   }
 }
 

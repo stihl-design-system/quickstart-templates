@@ -18,8 +18,11 @@
     list-style-type: none;
   }
 
-  h2,
-  li {
+  h4 {
+    margin-block-end: $ds-spacing-16;
+  }
+
+  li:not(:last-child) {
     margin-block-end: $ds-spacing-8;
   }
 }
@@ -30,11 +33,9 @@
 
   display: flex;
   justify-content: space-between;
-  padding-block: $ds-spacing-24;
-  flex-direction: column;
-  gap: $ds-spacing-24;
+  flex-wrap: wrap;
+  padding-block: $ds-spacing-dynamic-l;
 
-  @include ds-media-query-min('m') {
-    flex-direction: row;
-  }
+  column-gap: $ds-spacing-dynamic-xs;
+  row-gap: $ds-spacing-24;
 }

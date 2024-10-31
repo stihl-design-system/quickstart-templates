@@ -11,7 +11,8 @@
   // along the predefined grid areas.
   @include ds-grid;
 
-  padding-block: $ds-spacing-32;
+  padding-block-start: $ds-spacing-dynamic-xl;
+  padding-block-end: $ds-spacing-dynamic-xxl;
 }
 
 .title {
@@ -26,5 +27,5 @@
 
 .actions {
   display: flex;
-  margin-block-start: $ds-spacing-24;
+  margin-block-start: $ds-spacing-32;
 }

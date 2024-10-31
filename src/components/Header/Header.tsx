@@ -1,4 +1,4 @@
-import { DSHeading, DSLogo } from '@stihl-design-system/components';
+import { DSLogo, DSTitle } from '@stihl-design-system/components';
 import styles from './Header.module.scss';
 
 export function Header() {
@@ -16,7 +16,8 @@ export function Header() {
       <section className={styles['hero']}>
         <div className={styles['hero-image']}>
           <div className={styles['hero-image-title']}>
-            <DSHeading tag='h2'>Heading 2</DSHeading>
+            {/* <DSHeading tag='h2'>Heading 2</DSHeading> */}
+            <DSTitle>Title component</DSTitle>
           </div>
         </div>
       </section>
