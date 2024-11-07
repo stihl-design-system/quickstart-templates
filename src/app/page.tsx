@@ -43,9 +43,9 @@ export default function Home() {
       <form className={styles.content}>
         <DSFieldset
           legend={{
-            headingText: 'Fieldset Heading 2',
-            headingTag: 'h2',
-            headingSize: 'large',
+            headingText: 'Fieldset Heading 3',
+            headingTag: 'h3',
+            headingSize: 'medium',
           }}
           className={styles.fieldset}
         >
