@@ -29,6 +29,16 @@ export default function Home() {
           in eu. Fringilla et non tellus proin. Mauris tempus placerat fringilla
           ut.
         </DSText>
+        <DSText>
+          Lorem ipsum dolor sit amet consectetur.{' '}
+          <a href='https://stihl.com'>Eget sollicitudin</a> tellus id arcu
+          sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
+          vehicula sit ultrices. Eu leo sit duis blandit. Volutpat amet amet
+          augue ipsum eu felis sit. Cursus sit odio porttitor convallis
+          venenatis faucibus neque massa porttitor. Facilisis volutpat elementum
+          in eu. Fringilla et non tellus proin. Mauris tempus placerat fringilla
+          ut.
+        </DSText>
       </div>
       <form className={styles.content}>
         <DSFieldset

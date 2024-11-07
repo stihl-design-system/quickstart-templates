@@ -26,6 +26,10 @@
 .content {
   // Places the content in the predefined "narrow-left" column.
   @include ds-grid-narrow-left-column;
+
+  p:not(:last-child) {
+    margin-block-end: $ds-spacing-16;
+  }
 }
 
 .actions {
