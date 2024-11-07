@@ -31,6 +31,10 @@
   // Places the footer-content element in the predefined 'main' column.
   @include ds-grid-main-column;
   display: grid;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
   padding-block: $ds-spacing-dynamic-l;
 
   grid-template-columns: repeat(2, 1fr); // Two columns for mobile
