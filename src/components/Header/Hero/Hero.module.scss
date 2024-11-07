@@ -9,26 +9,6 @@
 // See full documentation for the STIHL Design System Grid at:
 // https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/styles-grid-grid--documentation
 // **************************************************************
-.top-bar {
-  // Initializes the grid layout for the top bar container.
-  // This enables us to place the contents inside the top bar along
-  // the predefined grid areas.
-  @include ds-grid;
-
-  min-height: max-content;
-  background: $ds-color-core-grey-mid;
-}
-
-.top-bar-content {
-  // Places the top-bar-content element in the predefined 'main' column.
-  @include ds-media-query-max('l') {
-    @include ds-grid-extended-column;
-  }
-
-  @include ds-media-query-min('l') {
-    @include ds-grid-main-column;
-  }
-}
 
 .hero {
   // Initializes the grid layout for the top bar container.
