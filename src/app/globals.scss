@@ -1,22 +1,32 @@
 @import '@stihl-design-system/components/styles/fonts';
 @import '@stihl-design-system/components/styles/scss';
 
-body {
-  display: flex;
-  flex-direction: column;
-  // body has a min-height of 100vh so that footer is at the bottom of the page
-  min-height: 100vh;
-}
+// Since the STIHL Design System have a CSS Layer called 'ds-reset' around the reset styles,
+// we can use the @layer directive to ensure that our custom styles are applied after the reset styles
+// and therefore have higher specificity.
+@layer ds-reset, app-base;
 
-:where(a:not([class])) {
-  @include ds-link();
-
-  &.link-highlight {
-    @include ds-link('highlight');
+// Create a CSS Layer for the base styles of the app.
+@layer app-base {
+  body {
+    display: flex;
+    flex-direction: column;
+    // body has a min-height of 100vh so that footer is at the bottom of the page
+    min-height: 100vh;
   }
-}
 
-main {
-  // make main content grow so that footer is always at the bottom of the page
-  flex: 1;
+  // Add default STIHL inline link styling to all links that do not have a class
+  // Use :where() to avoid specificity issues.
+  :where(a:not([class])) {
+    @include ds-link();
+
+    &.link-highlight {
+      @include ds-link('highlight');
+    }
+  }
+
+  main {
+    // make main content grow so that footer is always at the bottom of the page
+    flex: 1;
+  }
 }
