@@ -1,10 +1,19 @@
 @import '@stihl-design-system/components/styles/fonts';
+@import '@stihl-design-system/components/styles/scss';
 
 body {
   display: flex;
   flex-direction: column;
   // body has a min-height of 100vh so that footer is at the bottom of the page
   min-height: 100vh;
+}
+
+:where(a:not([class])) {
+  @include ds-link();
+
+  &.link-highlight {
+    @include ds-link('highlight');
+  }
 }
 
 main {
