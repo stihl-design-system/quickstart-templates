@@ -11,6 +11,9 @@
   // along the predefined grid areas.
   @include ds.grid;
 
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
   padding-block-start: ds.$spacing-dynamic-xl;
   padding-block-end: ds.$spacing-dynamic-xxl;
 }
@@ -23,6 +26,10 @@
 .content {
   // Places the content in the predefined "narrow-left" column.
   @include ds.grid-narrow-left-column;
+
+  p:not(:last-child) {
+    margin-block-end: ds.$spacing-16;
+  }
 }
 
 .actions {

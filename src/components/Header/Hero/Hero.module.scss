@@ -9,26 +9,6 @@
 // See full documentation for the STIHL Design System Grid at:
 // https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/styles-grid-grid--documentation
 // **************************************************************
-.top-bar {
-  // Initializes the grid layout for the top bar container.
-  // This enables us to place the contents inside the top bar along
-  // the predefined grid areas.
-  @include ds.grid;
-
-  min-height: max-content;
-  background: ds.$color-core-grey-mid;
-}
-
-.top-bar-content {
-  // Places the top-bar-content element in the predefined 'main' column.
-  @include ds.media-query-max('l') {
-    @include ds.grid-extended-column;
-  }
-
-  @include ds.media-query-min('l') {
-    @include ds.grid-main-column;
-  }
-}
 
 .hero {
   // Initializes the grid layout for the top bar container.
@@ -95,22 +75,19 @@
 .hero-image-title {
   // Places the hero-image-title-wrapper element in the predefined 'main' column.
   @include ds.grid-main-column;
-  background: white;
-  width: 100%;
+
+  background-color: white;
+  width: fit-content;
+
   margin-block-start: auto;
-  margin-block-end: ds.$spacing-24;
-  padding-block: ds.$spacing-16;
-  padding-inline: ds.$spacing-16;
 
-  @include ds.media-query-min('m') {
-    margin-block-end: ds.$spacing-32;
-    padding-block: ds.$spacing-24;
-    padding-inline: ds.$spacing-24;
-  }
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-s;
 
-  @include ds.media-query-min('xl') {
-    margin-block-end: ds.$spacing-40;
-    padding-block: ds.$spacing-32;
-    padding-inline: ds.$spacing-32;
-  }
+  padding-block-start: ds.$spacing-dynamic-s;
+  padding-block-end: ds.$spacing-dynamic-xs;
+  padding-inline-start: ds.$spacing-dynamic-s;
+  padding-inline-end: ds.$spacing-dynamic-l;
 }

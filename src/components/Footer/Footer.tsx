@@ -1,4 +1,4 @@
-import { DSHeading, DSLinkStandalone } from '@stihl-design-system/components';
+import { DSText, DSLinkStandalone } from '@stihl-design-system/components';
 import styles from './Footer.module.scss';
 
 export function Footer() {
@@ -6,10 +6,15 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles['footer-content']}>
         <div>
-          <DSHeading tag='h4' size='small'>
-            Heading 4
-          </DSHeading>
-          <nav aria-label='Heading 4 #1 Navigation'>
+          <DSText
+            className={styles.headline}
+            weight='bold'
+            size='medium'
+            id='headline-col-1'
+          >
+            Heading 1
+          </DSText>
+          <nav aria-labelledby='headline-col-1'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
@@ -27,10 +32,15 @@ export function Footer() {
           </nav>
         </div>
         <div>
-          <DSHeading tag='h4' size='small'>
-            Heading 4
-          </DSHeading>
-          <nav aria-label='Heading 4 #2 Navigation'>
+          <DSText
+            className={styles.headline}
+            weight='bold'
+            size='medium'
+            id='headline-col-2'
+          >
+            Heading 2
+          </DSText>
+          <nav aria-labelledby='headline-col-2'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
@@ -48,10 +58,15 @@ export function Footer() {
           </nav>
         </div>
         <div>
-          <DSHeading tag='h4' size='small'>
-            Heading 4
-          </DSHeading>
-          <nav aria-label='Heading 4 #3 Navigation'>
+          <DSText
+            className={styles.headline}
+            weight='bold'
+            size='medium'
+            id='headline-col-3'
+          >
+            Heading 3
+          </DSText>
+          <nav aria-labelledby='headline-col-3'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
@@ -69,10 +84,15 @@ export function Footer() {
           </nav>
         </div>
         <div>
-          <DSHeading tag='h4' size='small'>
+          <DSText
+            className={styles.headline}
+            weight='bold'
+            size='medium'
+            id='headline-col-4'
+          >
             Heading 4
-          </DSHeading>
-          <nav aria-label='Heading 4 #4 Navigation'>
+          </DSText>
+          <nav aria-labelledby='headline-col-4'>
             <ul>
               <li>
                 <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>

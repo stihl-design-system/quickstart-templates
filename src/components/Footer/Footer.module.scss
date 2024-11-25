@@ -18,8 +18,16 @@
     list-style-type: none;
   }
 
-  h4 {
+  // Style normal text to look like a headline.
+  // For accessibility reasons, we do not use h4 tags in the layout footer since it makes it harder to
+  // keep the correct heading hierarchy on each page.
+  .headline {
     margin-block-end: ds.$spacing-16;
+
+    // We're using the <DSText /> component with adjusted weight & size prop to make it look like a headline.
+    // Another approach would be to use a simple <p> - tag and the ds.heading-small scss mixin.
+    // See https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-typography-heading--documentation
+    // @include ds.heading-small;
   }
 
   li:not(:last-child) {
@@ -31,6 +39,10 @@
   // Places the footer-content element in the predefined 'main' column.
   @include ds.grid-main-column;
   display: grid;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
   padding-block: ds.$spacing-dynamic-l;
 
   grid-template-columns: repeat(2, 1fr); // Two columns for mobile

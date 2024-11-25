@@ -20,8 +20,19 @@ export default function Home() {
       </DSHeading>
       <div className={styles.content}>
         <DSText>
-          Lorem ipsum dolor sit amet consectetur. Eget sollicitudin tellus id
-          arcu sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
+          Lorem ipsum dolor sit amet consectetur.{' '}
+          <a href='https://stihl.com'>Eget sollicitudin</a> tellus id arcu
+          sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
+          vehicula sit ultrices. Eu leo sit duis blandit. Volutpat amet amet
+          augue ipsum eu felis sit. Cursus sit odio porttitor convallis
+          venenatis faucibus neque massa porttitor. Facilisis volutpat elementum
+          in eu. Fringilla et non tellus proin. Mauris tempus placerat fringilla
+          ut.
+        </DSText>
+        <DSText>
+          Lorem ipsum dolor sit amet consectetur.{' '}
+          <a href='https://stihl.com'>Eget sollicitudin</a> tellus id arcu
+          sollicitudin id egestas sed tincidunt. Amet pulvinar tellus lacus
           vehicula sit ultrices. Eu leo sit duis blandit. Volutpat amet amet
           augue ipsum eu felis sit. Cursus sit odio porttitor convallis
           venenatis faucibus neque massa porttitor. Facilisis volutpat elementum
@@ -32,13 +43,13 @@ export default function Home() {
       <form className={styles.content}>
         <DSFieldset
           legend={{
-            headingText: 'Fieldset Heading 2',
-            headingTag: 'h2',
-            headingSize: 'large',
+            headingText: 'Fieldset Heading 3',
+            headingTag: 'h3',
+            headingSize: 'medium',
           }}
           className={styles.fieldset}
         >
-          <DSNotification hideCloseButton>
+          <DSNotification>
             This is an example inline notification.
           </DSNotification>
           <DSCheckbox name='business' label='I am a business client' />
