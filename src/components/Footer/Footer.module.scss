@@ -1,4 +1,4 @@
-@import '@stihl-design-system/components/styles/scss';
+@use '@stihl-design-system/components/styles/scss/ds';
 
 .footer {
   // **************************************************************
@@ -9,8 +9,8 @@
   // Initializes the grid layout for the footer container.
   // This enables us to place the contents inside the footer container
   // along the predefined grid areas.
-  @include ds-grid;
-  background: $ds-color-core-grey-light;
+  @include ds.grid;
+  background: ds.$color-core-grey-light;
 
   ul {
     padding: 0;
@@ -18,32 +18,32 @@
     list-style-type: none;
   }
 
-  h4 {
-    margin-block-end: $ds-spacing-16;
+  .headline {
+    margin-block-end: ds.$spacing-16;
   }
 
   li:not(:last-child) {
-    margin-block-end: $ds-spacing-8;
+    margin-block-end: ds.$spacing-8;
   }
 }
 
 .footer-content {
   // Places the footer-content element in the predefined 'main' column.
-  @include ds-grid-main-column;
+  @include ds.grid-main-column;
   display: grid;
 
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
-  padding-block: $ds-spacing-dynamic-l;
+  padding-block: ds.$spacing-dynamic-l;
 
   grid-template-columns: repeat(2, 1fr); // Two columns for mobile
   grid-template-rows: repeat(2, 1fr); // Two rows for mobile
 
-  column-gap: $ds-spacing-dynamic-xs;
-  row-gap: $ds-spacing-24;
+  column-gap: ds.$spacing-dynamic-xs;
+  row-gap: ds.$spacing-24;
 
-  @include ds-media-query-min('m') {
+  @include ds.media-query-min('m') {
     grid-template-columns: repeat(4, 1fr); // Four columns for larger screens
     grid-template-rows: 1fr; // Single row for larger screens
   }

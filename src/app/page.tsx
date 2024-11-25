@@ -49,7 +49,7 @@ export default function Home() {
           }}
           className={styles.fieldset}
         >
-          <DSNotification hideCloseButton>
+          <DSNotification>
             This is an example inline notification.
           </DSNotification>
           <DSCheckbox name='business' label='I am a business client' />

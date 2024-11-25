@@ -1,4 +1,4 @@
-@import '@stihl-design-system/components/styles/scss';
+@use '@stihl-design-system/components/styles/scss/ds';
 
 // **************************************************************
 // The STIHL Design System Grid mixin is used in this example app.
@@ -14,14 +14,14 @@
   // Initializes the grid layout for the top bar container.
   // This enables us to place the contents inside the hero section along
   // the predefined grid areas.
-  @include ds-grid;
+  @include ds.grid;
 }
 
 .hero-image {
   // To span the hero image section across the full width of the
   // predefined 'extended' area, we use the ds-grid-extended-column mixin.
   // Extended columns are wider than the main columns but not full viewport width.
-  @include ds-grid-extended-column;
+  @include ds.grid-extended-column;
 
   // **************************************************************
   // IMPORTANT: We need to hardcode the basePath to /quickstart-templates
@@ -55,7 +55,7 @@
   grid-template-columns: subgrid;
 
   // Media query for minimum screen size defined by ds-media-query-min('m') mixin.
-  @include ds-media-query-min('m') {
+  @include ds.media-query-min('m') {
     // Default background image for larger screens as a fallback.
     background-image: url(/quickstart-templates/hero-bg.jpg);
     // Using image-set to provide multiple supported image formats for larger screens.
@@ -67,14 +67,14 @@
     height: 280px;
   }
 
-  @include ds-media-query-min('l') {
+  @include ds.media-query-min('l') {
     height: 420px;
   }
 }
 
 .hero-image-title {
   // Places the hero-image-title-wrapper element in the predefined 'main' column.
-  @include ds-grid-main-column;
+  @include ds.grid-main-column;
 
   background-color: white;
   width: fit-content;
@@ -84,10 +84,10 @@
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
-  margin-block-end: $ds-spacing-dynamic-s;
+  margin-block-end: ds.$spacing-dynamic-s;
 
-  padding-block-start: $ds-spacing-dynamic-s;
-  padding-block-end: $ds-spacing-dynamic-xs;
-  padding-inline-start: $ds-spacing-dynamic-s;
-  padding-inline-end: $ds-spacing-dynamic-l;
+  padding-block-start: ds.$spacing-dynamic-s;
+  padding-block-end: ds.$spacing-dynamic-xs;
+  padding-inline-start: ds.$spacing-dynamic-s;
+  padding-inline-end: ds.$spacing-dynamic-l;
 }

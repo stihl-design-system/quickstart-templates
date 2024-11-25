@@ -1,5 +1,5 @@
+@use '@stihl-design-system/components/styles/scss/ds';
 @import '@stihl-design-system/components/styles/fonts';
-@import '@stihl-design-system/components/styles/scss';
 
 // Since the STIHL Design System have a CSS Layer called 'ds-reset' around the reset styles,
 // we can use the @layer directive to ensure that our custom styles are applied after the reset styles
@@ -18,10 +18,10 @@
   // Add default STIHL inline link styling to all links that do not have a class
   // Use :where() to avoid specificity issues.
   :where(a:not([class])) {
-    @include ds-link();
-
+    @include ds.link();
+  
     &.link-highlight {
-      @include ds-link('highlight');
+      @include ds.link('highlight');
     }
   }
 
@@ -30,3 +30,4 @@
     flex: 1;
   }
 }
+

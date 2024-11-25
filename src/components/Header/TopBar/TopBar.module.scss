@@ -1,4 +1,4 @@
-@import '@stihl-design-system/components/styles/scss';
+@use '@stihl-design-system/components/styles/scss/ds';
 
 // **************************************************************
 // The STIHL Design System Grid mixin is used in this example app.
@@ -14,20 +14,20 @@
   // Initializes the grid layout for the top bar container.
   // This enables us to place the contents inside the top bar along
   // the predefined grid areas.
-  @include ds-grid;
+  @include ds.grid;
 
-  background-color: $ds-color-core-grey-mid;
+  background-color: ds.$color-core-grey-mid;
   min-height: max-content;
 }
 
 .top-bar-content {
   // Places the top-bar-content element in the predefined 'main' column.
-  @include ds-media-query-max('l') {
-    @include ds-grid-extended-column;
+  @include ds.media-query-max('l') {
+    @include ds.grid-extended-column;
   }
 
-  @include ds-media-query-min('l') {
-    @include ds-grid-main-column;
+  @include ds.media-query-min('l') {
+    @include ds.grid-main-column;
   }
 }
 
@@ -35,12 +35,12 @@
   width: 114px;
   height: 50px;
 
-  @include ds-media-query-min('m') {
+  @include ds.media-query-min('m') {
     width: 128px;
     height: 56px;
   }
 
-  @include ds-media-query-min('l') {
+  @include ds.media-query-min('l') {
     width: 137px;
     height: 60px;
   }
