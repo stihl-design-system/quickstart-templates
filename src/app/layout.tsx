@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.scss';
-import { getResetStyles } from '@stihl-design-system/components/partials';
+import {
+  getResetStyles,
+  getSSRStyles,
+} from '@stihl-design-system/components/partials';
 import {
   DSAriaLiveRegions,
   DSSkipToContent,
@@ -24,9 +27,8 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         {
-          // Include the global reset styles from the STIHL design system.
+          // Include the global reset styles from the STIHL Design System.
           getResetStyles()
-
           /**
            * Next.js 14.x currently sets the manifest path incorrectly when using a "basePath".
            * Since we are using a basePath to deploy this example page to GitHub Pages, the
@@ -36,15 +38,29 @@ export default function RootLayout({
            * See the following issue for more information: https://github.com/vercel/next.js/issues/56687
            */
         }
+        {
+          // Include the styles for all STIHL Design System components above the fold of the first contentful paint
+          getSSRStyles([
+            'DSLogo',
+            'DSTitle',
+            'DSHeading',
+            'DSText',
+            'DSFieldset',
+            'DSNotification',
+            'DSCheckbox',
+            'DSRadioGroup',
+            'DSInput',
+          ])
+        }
       </head>
       <body>
-        {/* 
+        {/*
           The DSToastProvider must wrap the application whenever useDSToast() is utilized.
           See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-toast--documentation
         */}
         <DSToastProvider>
-          {/* 
-          Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" /> 
+          {/*
+          Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" />
           See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-skip-to-content-link--documentation
         */}
           <DSSkipToContent />
