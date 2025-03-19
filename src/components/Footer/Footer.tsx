@@ -1,4 +1,4 @@
-import { DSText, DSLinkStandalone } from '@stihl-design-system/components';
+import { DSText, DSLink } from '@stihl-design-system/components';
 import styles from './Footer.module.scss';
 
 export function Footer() {
@@ -17,16 +17,16 @@ export function Footer() {
           <nav aria-labelledby='headline-col-1'>
             <ul>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
             </ul>
           </nav>
@@ -43,16 +43,16 @@ export function Footer() {
           <nav aria-labelledby='headline-col-2'>
             <ul>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
             </ul>
           </nav>
@@ -69,16 +69,16 @@ export function Footer() {
           <nav aria-labelledby='headline-col-3'>
             <ul>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
             </ul>
           </nav>
@@ -95,16 +95,16 @@ export function Footer() {
           <nav aria-labelledby='headline-col-4'>
             <ul>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
               <li>
-                <DSLinkStandalone href='#'>Standalone Link</DSLinkStandalone>
+                <DSLink href='#'>Link</DSLink>
               </li>
             </ul>
           </nav>
