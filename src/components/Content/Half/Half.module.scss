@@ -1,0 +1,53 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+.section {
+  // **************************************************************
+  // See /src/components/Header/Hero/Hero.module.scss for more information
+  // about how to use the STIHL Design System Grid.
+  // **************************************************************
+
+  // Initializes the grid layout for the section container.
+  // This enables us to place the content inside the section container
+  // along the predefined grid areas.
+  @include ds.grid;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-xl;
+}
+
+.first-half {
+  // Places the content in the predefined "first-half" column.
+  @include ds.grid-first-half;
+}
+
+.second-half {
+  // Places the content in the predefined "one-half" column.
+  @include ds.grid-span-one-half;
+}
+
+.image {
+  // Ensures the image scales proportionally even when the width & height is set in the <img>
+  // element.
+  height: auto;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-s;
+}
+
+.heading {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-xs;
+}
+
+.link {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-start: ds.$spacing-dynamic-xs;
+}

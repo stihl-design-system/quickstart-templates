@@ -19,7 +19,7 @@
   // Use :where() to avoid specificity issues.
   :where(a:not([class])) {
     @include ds.link();
-  
+
     &.link-highlight {
       @include ds.link('highlight');
     }
@@ -29,5 +29,13 @@
     // make main content grow so that footer is always at the bottom of the page
     flex: 1;
   }
-}
 
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .max-text-width {
+    max-width: 34rem;
+  }
+}

@@ -1,0 +1,54 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+.section {
+  // **************************************************************
+  // See /src/components/Header/Hero/Hero.module.scss for more information
+  // about how to use the STIHL Design System Grid.
+  // **************************************************************
+
+  // Initializes the grid layout for the section container.
+  // This enables us to place the content inside the section container
+  // along the predefined grid areas.
+  @include ds.grid;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-xxl;
+}
+
+.first-quarter,
+.quarter,
+.third-quarter {
+  border-bottom: 1px solid ds.$theme-light-border-color-secondary;
+  padding-block-end: ds.$spacing-16;
+}
+
+.first-quarter {
+  // Places the content in the predefined "first-quarter" column.
+  @include ds.grid-first-quarter;
+}
+
+.quarter {
+  // Places the content in the predefined "one-quarter" column.
+  @include ds.grid-span-one-quarter;
+}
+
+.third-quarter {
+  // Places the content in the predefined "one-quarter" column.
+  // This must be set to true on every third item of that type (i.e. 3rd third or 3rd quarter)
+  // to ensure it behaves like a first-third (for viewports ≥ M and < L) or first-quarter (for viewports < L),
+  // causing it to start a new row when the previous columns overflow.
+  // See Grid docs for more information.
+  @include ds.grid-span-one-quarter($isThirdItem: true);
+}
+
+.image {
+  // Ensures the image scales proportionally even when the width & height is set in the <img>
+  // element.
+  height: auto;
+}
+
+.link {
+  margin-block-start: ds.$spacing-16;
+}

@@ -1,16 +1,6 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
-.section {
-  // **************************************************************
-  // See /src/components/Header/Header.module.scss for more information
-  // about how to use the STIHL Design System Grid.
-  // **************************************************************
-
-  // Initializes the grid layout for the section container.
-  // This enables us to place the content inside the section container
-  // along the predefined grid areas.
-  @include ds.grid;
-
+.page {
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
@@ -18,9 +8,26 @@
   padding-block-end: ds.$spacing-dynamic-xxl;
 }
 
+.row {
+  // **************************************************************
+  // See /src/components/Header/Hero/Hero.module.scss for more information
+  // about how to use the STIHL Design System Grid.
+  // **************************************************************
+
+  // Initializes the grid layout for the section container.
+  // This enables us to place the content inside the section container
+  // along the predefined grid areas.
+  @include ds.grid;
+}
+
 .title {
-  // Places the title element in the predefined "narrow-left" column.
-  @include ds.grid-narrow-left-column;
+  // Places the title element in the predefined "main" column.
+  @include ds.grid-main-column;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-m;
 }
 
 .content {

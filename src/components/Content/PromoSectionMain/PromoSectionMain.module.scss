@@ -1,0 +1,39 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+.section {
+  // **************************************************************
+  // See /src/components/Header/Hero/Hero.module.scss for more information
+  // about how to use the STIHL Design System Grid.
+  // **************************************************************
+
+  // Initializes the grid layout for the section container.
+  // This enables us to place the content inside the section container
+  // along the predefined grid areas.
+  @include ds.grid;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-l;
+}
+
+.main {
+  // Places the content in the predefined "main" column.
+  @include ds.grid-main-column;
+  background-color: ds.$theme-light-background-color-brand;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 296px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin-block-end: ds.$spacing-24;
+  text-align: center;
+}
