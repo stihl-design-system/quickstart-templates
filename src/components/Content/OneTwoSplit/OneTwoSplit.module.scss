@@ -38,10 +38,6 @@
   margin-block-end: ds.$spacing-dynamic-xs;
 }
 
-.text {
-  max-width: 34rem;
-}
-
 .link {
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in

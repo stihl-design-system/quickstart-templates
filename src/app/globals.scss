@@ -36,6 +36,11 @@
   }
 
   .max-text-width {
+    // Text paragraphs should have a max-width of 34rem to ensure readability.
+    // This is a design decision made by the STIHL Design System team.
+    // The value is based on the font size and line height of the body text.
+    // The max-width is set to 34rem to ensure that the text does not stretch too wide
+    // and become difficult to read.
     max-width: 34rem;
   }
 }
