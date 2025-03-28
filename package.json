@@ -14,22 +14,22 @@
   },
   "dependencies": {
     "@stihl-design-system/components": "^1.0.0-RC.19",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "@playwright/test": "^1.51.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "axe-html-reporter": "^2.2.11",
     "concurrently": "^9.1.2",
     "eslint": "^9.23.0",
     "eslint-config-next": "^15.2.4",
     "sass": "^1.86.0",
     "serve": "^14.2.4",
-    "typescript": "^5"
+    "typescript": "^5.8.2"
   }
 }
