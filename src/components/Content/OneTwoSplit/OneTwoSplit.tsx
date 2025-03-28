@@ -7,7 +7,7 @@ export default function OneTwoSplit() {
   return (
     <section className={styles.section}>
       <img
-        src='/quickstart-templates/content/content-image-08.png'
+        src='/quickstart-templates/content-image-08.png'
         alt='A person holds a STIHL AP 500 S battery, showing its charge level with LED indicators, while wearing an orange work jacket outdoors.'
         className={styles['first-third']}
         width={447}

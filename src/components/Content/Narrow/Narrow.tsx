@@ -27,7 +27,7 @@ export default function Narrow() {
           Infrastructure voluptate elit amet ex ecosystem
         </DSHeading>
         <img
-          src='/quickstart-templates/content/content-image-012.png'
+          src='/quickstart-templates/content-image-012.png'
           alt='A professional arborist wearing safety gear and a helmet is secured with ropes while working high in a tree in a dense forest. A STIHL battery-powered chainsaw hangs from their harness as they prepare for tree maintenance.'
           width={688}
           height={387}

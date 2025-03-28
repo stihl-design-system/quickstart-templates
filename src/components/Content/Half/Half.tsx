@@ -8,7 +8,7 @@ export default function Half() {
     <section className={styles.section}>
       <div className={styles['first-half']}>
         <img
-          src='/quickstart-templates/content/content-image-01.png'
+          src='/quickstart-templates/content-image-01.png'
           alt='Two forestry workers in orange and black protective gear walk uphill through a snowy forest, each carrying a chainsaw. The tall pine trees are covered in snow, and the scene is misty and wintry.'
           width={688}
           height={387}
@@ -41,7 +41,7 @@ export default function Half() {
       </div>
       <div className={styles['second-half']}>
         <img
-          src='/quickstart-templates/content/content-image-02.png'
+          src='/quickstart-templates/content-image-02.png'
           alt='A selection of STIHL battery-powered garden tools displayed on a neatly trimmed lawn in front of a tall green hedge, including a lawn mower, hedge trimmer, leaf blower, and chainsaw.'
           width={688}
           height={387}

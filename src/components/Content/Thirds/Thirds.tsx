@@ -8,7 +8,7 @@ export default function Thirds() {
     <section className={styles.section}>
       <div className={styles['first-third']}>
         <img
-          src='/quickstart-templates/content/content-image-04.png'
+          src='/quickstart-templates/content-image-04.png'
           alt='Two people load STIHL garden tools onto the back of a white pickup truck parked on a path in a landscaped urban park, with autumn trees and office buildings in the background.'
           width={448}
           height={252}
@@ -41,7 +41,7 @@ export default function Thirds() {
       </div>
       <div className={styles['second-third']}>
         <img
-          src='/quickstart-templates/content/content-image-05.png'
+          src='/quickstart-templates/content-image-05.png'
           alt='A close-up of a STIHL chainsaw bar and chain resting on a tree stump in a forest, with a large felled log in the background.'
           width={448}
           height={252}
@@ -74,7 +74,7 @@ export default function Thirds() {
       </div>
       <div className={styles['third-third']}>
         <img
-          src='/quickstart-templates/content/content-image-06.png'
+          src='/quickstart-templates/content-image-06.png'
           alt='A man wearing protective gear trims overgrown vegetation in a dense garden using a STIHL brushcutter on a sunny day.'
           width={448}
           height={252}
