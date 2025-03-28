@@ -19,12 +19,12 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.9.1",
-    "@playwright/test": "^1.46.0",
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.51.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "axe-html-reporter": "^2.2.5",
+    "axe-html-reporter": "^2.2.11",
     "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
