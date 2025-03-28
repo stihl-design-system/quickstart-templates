@@ -26,8 +26,8 @@
     "@types/react-dom": "^18",
     "axe-html-reporter": "^2.2.11",
     "concurrently": "^8.2.2",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint": "^9.23.0",
+    "eslint-config-next": "^15.2.4",
     "sass": "^1.77.8",
     "serve": "^14.2.3",
     "typescript": "^5"
