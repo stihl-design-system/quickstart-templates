@@ -7,7 +7,7 @@ export default function TwoOneSplit() {
   return (
     <section className={styles.section}>
       <img
-        src='/quickstart-templates/content-image-03.png'
+        src='/quickstart-templates/content-image-03.webp'
         alt='A woman in workwear uses a STIHL leaf blower to clear fallen leaves and garden debris in a lush, green backyard with dense shrubbery and trees.'
         className={styles['first-two-thirds']}
         width={949}
