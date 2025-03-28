@@ -1,6 +1,8 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
 .footer {
+  background: ds.$color-core-grey-light;
+
   // **************************************************************
   // See /src/components/Header/Hero/Hero.module.scss for more information
   // about how to use the STIHL Design System Grid.
@@ -10,7 +12,6 @@
   // This enables us to place the contents inside the footer container
   // along the predefined grid areas.
   @include ds.grid;
-  background: ds.$color-core-grey-light;
 
   ul {
     padding: 0;
