@@ -7,6 +7,7 @@ export default function Half() {
   return (
     <section className={styles.section}>
       <div className={styles['first-half']}>
+        {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
         <img
           src='/quickstart-templates/content-image-01.webp'
           alt='Two forestry workers in orange and black protective gear walk uphill through a snowy forest, each carrying a chainsaw. The tall pine trees are covered in snow, and the scene is misty and wintry.'
@@ -40,6 +41,7 @@ export default function Half() {
         </DSLinkButton>
       </div>
       <div className={styles['second-half']}>
+        {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
         <img
           src='/quickstart-templates/content-image-02.webp'
           alt='A selection of STIHL battery-powered garden tools displayed on a neatly trimmed lawn in front of a tall green hedge, including a lawn mower, hedge trimmer, leaf blower, and chainsaw.'

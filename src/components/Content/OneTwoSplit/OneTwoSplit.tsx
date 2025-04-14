@@ -6,6 +6,7 @@ import { DSLinkButton } from '@stihl-design-system/components';
 export default function OneTwoSplit() {
   return (
     <section className={styles.section}>
+      {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
       <img
         src='/quickstart-templates/content-image-08.webp'
         alt='A person holds a STIHL AP 500 S battery, showing its charge level with LED indicators, while wearing an orange work jacket outdoors.'

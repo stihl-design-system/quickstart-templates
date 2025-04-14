@@ -26,6 +26,7 @@ export default function Narrow() {
         <DSHeading tag='h2' size='large' className={styles.heading}>
           Infrastructure voluptate elit amet ex ecosystem
         </DSHeading>
+        {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
         <img
           src='/quickstart-templates/content-image-012.webp'
           alt='A professional arborist wearing safety gear and a helmet is secured with ropes while working high in a tree in a dense forest. A STIHL battery-powered chainsaw hangs from their harness as they prepare for tree maintenance.'
