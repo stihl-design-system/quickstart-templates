@@ -13,7 +13,7 @@
     "test:vrt": "npx playwright test --config=playwright.config.vrt.ts"
   },
   "dependencies": {
-    "@stihl-design-system/components": "^1.0.0-RC.20",
+    "@stihl-design-system/components": "^1.0.0-RC.21",
     "next": "^15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
