@@ -73,6 +73,12 @@
 }
 
 .hero-image-title {
+  // Hide the hero image title on mobile viewports
+  display: none;
+  // Show the hero image title on larger viewports
+  @include ds.media-query-min('m') {
+    display: block;
+  }
   // Places the hero-image-title-wrapper element in the predefined 'main' column.
   @include ds.grid-main-column;
 
@@ -90,4 +96,18 @@
   padding-block-end: ds.$spacing-dynamic-xs;
   padding-inline-start: ds.$spacing-dynamic-s;
   padding-inline-end: ds.$spacing-dynamic-l;
+}
+
+.title {
+  // SHow the hero image title on mobile viewports
+  display: block;
+  // Hide the hero image title on larger viewports
+  @include ds.media-query-min('m') {
+    display: none;
+  }
+
+  // Place the title element in the predefined 'main' column
+  @include ds.grid-main-column;
+  // Add 8 px to the grid gap to the top of the title element
+  margin-block-start: ds.$spacing-8;
 }

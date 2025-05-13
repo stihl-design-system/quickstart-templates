@@ -2,6 +2,7 @@ import { DSHeading } from '@stihl-design-system/components';
 import styles from './Half.module.scss';
 import { DSText } from '@stihl-design-system/components';
 import { DSLinkButton } from '@stihl-design-system/components';
+import classNames from 'classnames';
 
 export default function Half() {
   return (
@@ -15,7 +16,11 @@ export default function Half() {
           height={387}
           className={styles.image}
         />
-        <DSHeading tag='h2' size='large' className={styles.heading}>
+        <DSHeading
+          tag='h2'
+          size='large'
+          className={classNames(styles.heading, 'max-text-width')}
+        >
           Analytics scalability making training infrastructure
         </DSHeading>
         <DSText className='max-text-width'>
@@ -49,7 +54,11 @@ export default function Half() {
           height={387}
           className={styles.image}
         />
-        <DSHeading tag='h2' size='large' className={styles.heading}>
+        <DSHeading
+          tag='h2'
+          size='large'
+          className={classNames(styles.heading, 'max-text-width')}
+        >
           Analytics scalability making training infrastructure
         </DSHeading>
         <DSText className='max-text-width'>

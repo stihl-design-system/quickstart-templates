@@ -25,16 +25,26 @@ export default function TwoOneSplit() {
           augue ipsum eu felis sit. Cursus sit odio porttitor convallis
           venenatis faucibus neque massa porttitor.
         </DSText>
-        <DSLinkButton
-          href='#'
-          iconName='chevron-right'
-          iconPosition='right'
-          variant='ghost'
-          isFlush
-          className={styles.link}
-        >
-          Link
-        </DSLinkButton>
+        <div className={styles['link-container']}>
+          <DSLinkButton
+            href='#'
+            iconName='chevron-right'
+            iconPosition='right'
+            variant='ghost'
+            isFlush
+          >
+            Link
+          </DSLinkButton>
+          <DSLinkButton
+            href='#'
+            iconName='chevron-right'
+            iconPosition='right'
+            variant='ghost'
+            isFlush
+          >
+            Link
+          </DSLinkButton>
+        </div>
       </div>
     </section>
   );

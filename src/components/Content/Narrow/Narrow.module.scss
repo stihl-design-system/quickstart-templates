@@ -1,11 +1,6 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
 .section {
-  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
-  // This removes the need to adjust the spacing values manually with media queries in
-  // the application's stylesheets.
-  margin-block-end: ds.$spacing-dynamic-xl;
-
   // **************************************************************
   // See /src/components/Header/Hero/Hero.module.scss for more information
   // about how to use the STIHL Design System Grid.
@@ -30,21 +25,21 @@
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
-  margin-block-end: ds.$spacing-dynamic-s;
+  margin-block-end: ds.$spacing-dynamic-l;
 }
 
 .heading {
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
-  margin-block-end: ds.$spacing-dynamic-xs;
+  margin-block-end: ds.$spacing-dynamic-m;
 }
 
 .form {
   // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
   // This removes the need to adjust the spacing values manually with media queries in
   // the application's stylesheets.
-  margin-block-start: ds.$spacing-dynamic-m;
+  margin-block-start: ds.$spacing-dynamic-l;
 }
 
 .fieldset {

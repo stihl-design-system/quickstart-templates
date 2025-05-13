@@ -9,6 +9,7 @@ export function Hero() {
           <DSTitle>Title component</DSTitle>
         </div>
       </div>
+      <DSTitle className={styles['title']}>Title component</DSTitle>
     </section>
   );
 }

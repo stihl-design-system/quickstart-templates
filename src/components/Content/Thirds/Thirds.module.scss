@@ -41,22 +41,13 @@
   // element.
   height: auto;
 
-  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
-  // This removes the need to adjust the spacing values manually with media queries in
-  // the application's stylesheets.
-  margin-block-end: ds.$spacing-dynamic-s;
+  margin-block-end: ds.$spacing-32;
 }
 
 .heading {
-  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
-  // This removes the need to adjust the spacing values manually with media queries in
-  // the application's stylesheets.
-  margin-block-end: ds.$spacing-dynamic-xs;
+  margin-block-end: ds.$spacing-16;
 }
 
 .link {
-  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
-  // This removes the need to adjust the spacing values manually with media queries in
-  // the application's stylesheets.
-  margin-block-start: ds.$spacing-dynamic-xs;
+  margin-block-start: ds.$spacing-16;
 }

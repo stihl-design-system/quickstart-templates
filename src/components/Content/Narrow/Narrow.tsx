@@ -14,6 +14,7 @@ import {
 } from '@stihl-design-system/components';
 import styles from './Narrow.module.scss';
 import { DSText } from '@stihl-design-system/components';
+import classNames from 'classnames';
 
 export default function Narrow() {
   const COUNTRIES: ComboboxOptionsOrOptGroups = [
@@ -23,7 +24,7 @@ export default function Narrow() {
   return (
     <section className={styles.section}>
       <div className={styles.narrow}>
-        <DSHeading tag='h2' size='large' className={styles.heading}>
+        <DSHeading tag='h2' size='large-uppercase' className={styles.heading}>
           Infrastructure voluptate elit amet ex ecosystem
         </DSHeading>
         {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
@@ -47,7 +48,7 @@ export default function Narrow() {
           takimata sanctus est Lorem ipsum dolor sit amet.
         </DSText>
 
-        <form className={styles.form}>
+        <form className={classNames(styles.form, 'max-text-width')}>
           <DSFieldset
             legend={{
               headingText: 'Fieldset Heading 3',
