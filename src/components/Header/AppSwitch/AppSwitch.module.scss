@@ -1,0 +1,23 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+.app-switch-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: ds.$spacing-4;
+}
+
+.app-switch-heading {
+  padding-inline: ds.$spacing-16;
+  padding-block-start: ds.$spacing-6;
+  padding-block-end: ds.$spacing-6;
+}
+
+.horizontal-divider {
+  height: 1px;
+  width: 100%;
+  background-color: ds.$theme-light-border-color-tertiary;
+  margin-block: ds.$spacing-6;
+}
