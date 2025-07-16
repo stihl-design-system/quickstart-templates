@@ -1,0 +1,36 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+// Styles for the top bar navigation list
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: ds.$spacing-8;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 40px;
+  margin-inline: ds.$spacing-8;
+  background-color: ds.$theme-light-border-color-tertiary;
+}
+
+// The burger menu button should only be visible on smaller devices.
+.burger-menu-btn {
+  display: block;
+
+  @include ds.media-query-min('l') {
+    display: none;
+  }
+}
+
+// Hide some navigation list items on smaller devices
+.only-desktop {
+  display: none;
+
+  @include ds.media-query-min('l') {
+    display: block;
+  }
+}

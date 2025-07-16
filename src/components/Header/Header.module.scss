@@ -1,0 +1,35 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+// Styling for the content of the banner (decorative DSIcon + DSLink with icon prop)
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: ds.$spacing-8;
+}
+
+// Styling for the search input form wrapper
+.input-search-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// Custom styling for the input search component to match the design
+.input-search--rounded {
+  flex: 1;
+  min-width: 140px;
+
+  @include ds.media-query-min('l') {
+    // set a maximum width on the input on viewports >= L
+    max-width: 544px;
+  }
+
+  input {
+    // make input type search round
+    border-radius: 1.5rem;
+  }
+  // adjust input type search button to be round
+  button {
+    border-radius: 1.5rem;
+  }
+}

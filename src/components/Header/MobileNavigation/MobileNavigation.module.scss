@@ -1,0 +1,26 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  // Make sure the bottom navigation is always at the bottom of the menu drawer.
+  justify-content: space-between;
+  height: -webkit-fill-available;
+
+  // Add some padding to prevent focus outline from being cut off.
+  padding-block-end: ds.$spacing-8;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  // Make sure the <li> items stretch to fill the available space
+  // This allows the button & link items to fill the available width if wanted.
+  align-items: stretch;
+}
