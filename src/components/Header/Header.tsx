@@ -15,7 +15,11 @@ import { MainNavigation } from './MainNavigation/MainNavigation';
 export function Header() {
   return (
     <>
-      <DSHeader variant='main' brandAddOnProps={{ children: 'Brand AddOn' }}>
+      <DSHeader
+        variant='main'
+        isHeaderSticky={true}
+        brandAddOnProps={{ children: 'Brand AddOn' }}
+      >
         <DSHeader.BannerArea>
           <DSBanner>
             <div className={styles['banner-content']}>
