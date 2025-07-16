@@ -33,16 +33,13 @@ export function LanguageSelect() {
             placeholder='Search Language'
             hideLabel={true}
             size='small'
-            className={styles['language-filter']}
+            className={styles['filter-input']}
           />
           <div className={styles['horizontal-divider']} />
           <h2 id='global-sites' className={styles['list-heading']}>
             Global Sites
           </h2>
-          <ul
-            aria-labelledby='global-sites'
-            className={styles['language-select-list']}
-          >
+          <ul aria-labelledby='global-sites' className={styles['list']}>
             <li>
               <DSActionLink href='#' stretched={true}>
                 Global / English
@@ -68,10 +65,7 @@ export function LanguageSelect() {
           <h2 id='local-sites' className={styles['list-heading']}>
             Local Sites
           </h2>
-          <ul
-            aria-labelledby='local-sites'
-            className={styles['language-select-list']}
-          >
+          <ul aria-labelledby='local-sites' className={styles.list}>
             <li>
               <DSActionLink href='#' stretched={true} isActive={true}>
                 Deutschland / Deutsch

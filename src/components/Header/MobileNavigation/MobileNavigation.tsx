@@ -11,7 +11,7 @@ import styles from './MobileNavigation.module.scss';
 export function MobileNavigation() {
   return (
     <div className={styles.content}>
-      <nav aria-label='Hauptnavigation'>
+      <nav aria-label='Main Navigation'>
         <ul className={classNames(styles.list)}>
           <li>
             <DSButton
@@ -64,10 +64,7 @@ export function MobileNavigation() {
           </li>
         </ul>
       </nav>
-      <nav
-        aria-label='Sub Navigation'
-        className={styles.mobileTopBarNavigation}
-      >
+      <nav aria-label='Sub Navigation'>
         <ul className={classNames(styles.list)}>
           <li>
             <DSActionButton iconName='envelope' stretched={true}>

@@ -1,58 +1,26 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
-.list {
+.content {
   display: flex;
-
-  gap: 0;
   flex-direction: column;
-  align-items: flex-start;
+
+  // Make sure the bottom navigation is always at the bottom of the menu drawer.
+  justify-content: space-between;
+  height: -webkit-fill-available;
+
+  // Add some padding to prevent focus outline from being cut off.
+  padding-block-end: ds.$spacing-8;
+}
+
+.list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 
-  & > li {
-    width: 100%;
-  }
-}
-
-.mobile-menu {
-  display: block;
-
-  @include ds.media-query-min('l') {
-    display: none;
-  }
-}
-
-.content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: -webkit-fill-available;
-}
-
-.mobile-top-bar-navigation {
-  margin-block-start: auto;
-}
-
-.horizontal-divider {
-  height: 1px;
-  width: 100%;
-  background-color: ds.$theme-light-border-color-tertiary;
-  margin-block: ds.$spacing-6;
-}
-
-.vertical-divider {
-  width: 1px;
-  height: 40px;
-  margin-inline: ds.$spacing-8;
-  background-color: ds.$theme-light-border-color-tertiary;
-}
-
-.vertical-divider-container {
-  // Align everything after the vertical divider to the right on mobile
-  margin-inline-start: auto;
-
-  @include ds.media-query-min('m') {
-    margin-inline-start: unset;
-  }
+  gap: 0;
+  // Make sure the <li> items stretch to fill the available space
+  // This allows the button & link items to fill the available width if wanted.
+  align-items: stretch;
 }

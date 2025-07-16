@@ -16,11 +16,8 @@ export function TopBarNavigation() {
 
   return (
     <>
-      <nav
-        aria-label='Top Bar Navigation'
-        className={styles['top-bar-navigation']}
-      >
-        <ul>
+      <nav aria-label='Top Bar Navigation'>
+        <ul className={styles['list']}>
           <li className={styles['only-desktop']}>
             <DSActionLink
               id='top-bar-link-contact'

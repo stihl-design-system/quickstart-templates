@@ -28,12 +28,12 @@ export function AppSwitch() {
         <DSHeading
           size='small'
           id='app-switch-heading'
-          className={styles['app-switch-heading']}
+          className={styles.heading}
         >
           STIHL World
         </DSHeading>
         <nav aria-labelledby='app-switch-heading'>
-          <ul className={styles['app-switch-list']}>
+          <ul className={styles.list}>
             <li
               aria-hidden='true'
               className={styles['horizontal-divider']}

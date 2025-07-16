@@ -1,6 +1,7 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
-.app-switch-list {
+// Styles for the STIHL World Apps navigation list
+.list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -9,7 +10,8 @@
   gap: ds.$spacing-4;
 }
 
-.app-switch-heading {
+// Add some spacing to the app switch heading
+.heading {
   padding-inline: ds.$spacing-16;
   padding-block-start: ds.$spacing-6;
   padding-block-end: ds.$spacing-6;

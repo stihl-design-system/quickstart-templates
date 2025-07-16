@@ -1,6 +1,7 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
-.language-select-list {
+// Styles for the language selection list
+.list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -9,15 +10,16 @@
   gap: ds.$spacing-4;
 }
 
-.language-filter {
-  padding-block-end: ds.$spacing-4;
-}
-
+// Styles for the group headings in the language list.
 .list-heading {
   @include ds.utility-small;
   color: ds.$theme-light-content-color-secondary;
   padding-block: 10px;
   padding-inline: ds.$spacing-16;
+}
+
+.filter-input {
+  padding-block-end: ds.$spacing-4;
 }
 
 .horizontal-divider {
