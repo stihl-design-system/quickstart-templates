@@ -14,7 +14,7 @@
 .list-heading {
   @include ds.utility-small;
   color: ds.$theme-light-content-color-secondary;
-  padding-block: 10px;
+  padding-block: ds.$spacing-6;
   padding-inline: ds.$spacing-16;
 }
 
