@@ -17,7 +17,7 @@ export function TopBarNavigation() {
   return (
     <>
       <nav aria-label='Top Bar Navigation'>
-        <ul className={styles['list']}>
+        <ul className={styles['navigation-list']}>
           <li className={styles['only-desktop']}>
             <DSActionLink
               id='top-bar-link-contact'
@@ -40,7 +40,7 @@ export function TopBarNavigation() {
               Cart
             </DSActionLink>
           </li>
-          {/* The Language and STIHL World button in the DSTopBar should only be visible on larger devices. */}
+          {/* The Language and STIHL World button in the DSTopBar should only be visible on viewports >= L (1024px). */}
           <li className={styles['only-desktop']}>
             <LanguageSelect />
           </li>
@@ -48,12 +48,12 @@ export function TopBarNavigation() {
           <li aria-hidden='true'>
             <div className={styles['vertical-divider']} />
           </li>
-          {/* The STIHL World button in the DSTopBar should only be visible on larger devices. */}
+          {/* The Language and STIHL World button in the DSTopBar should only be visible on viewports >= L (1024px). */}
           <li className={styles['only-desktop']}>
             <AppSwitch />
           </li>
-          {/* Menu button that is only visible on mobile devices */}
-          <li className={styles['burger-menu-btn']}>
+          {/* The burger menu button should only be visible on viewports < L (1024px). */}
+          <li className={styles['only-mobile']}>
             <DSActionButton
               iconName='burger'
               iconPosition='top'
@@ -65,11 +65,12 @@ export function TopBarNavigation() {
           </li>
         </ul>
       </nav>
-      {/* Use DSDrawer for mobile menu. Since it's placed in the Top Layer it can be used at any position */}
+      {/* Use DSDrawer for Mobile Menu. Since it's placed in the Top Layer it can be used at any position. */}
       <DSDrawer
         isOpen={showMobileMenu}
         onClose={() => setShowMobileMenu(false)}
         position='end'
+        className={styles['mobile-menu']}
       >
         <MobileNavigation />
       </DSDrawer>

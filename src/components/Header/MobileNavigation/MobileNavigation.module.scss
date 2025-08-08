@@ -1,26 +1,38 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
-.content {
+// styles for the content inside the mobile menu
+.mobile-menu-content {
   display: flex;
   flex-direction: column;
-
-  // Make sure the bottom navigation is always at the bottom of the menu drawer.
   justify-content: space-between;
   height: -webkit-fill-available;
-
-  // Add some padding to prevent focus outline from being cut off.
-  padding-block-end: ds.$spacing-8;
 }
 
-.list {
+.navigation-list--mobile {
+  display: flex;
+  align-items: center;
+  gap: ds.$spacing-24;
+  flex-direction: column;
+  // Make sure the <li> items stretch to fill the available space
+  // This allows the button & link items to fill the available width if wanted.
+  align-items: stretch;
+
+  // reset native ul styles
   list-style-type: none;
   padding: 0;
   margin: 0;
 
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  // Make sure the <li> items stretch to fill the available space
-  // This allows the button & link items to fill the available width if wanted.
-  align-items: stretch;
+  // the last in the Mobile Menu child has extra block end margin
+  & > li:last-child {
+    margin-block-end: ds.$spacing-24;
+  }
+}
+
+// Splits the content of the MobileMenu into the items from the
+// MainNavigationArea (top) and DSTopBar (bottom)
+.horizontal-divider--mobile {
+  height: 1px;
+  width: 100%;
+  background-color: ds.$theme-light-border-color-tertiary;
+  margin-block: ds.$spacing-20;
 }

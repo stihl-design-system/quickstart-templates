@@ -30,6 +30,21 @@ type Options = {
   // Should be passed if executing multiple media query tests in one .vrt file, to make the tests distinguishable
   testTitle?: string;
   shouldSkipFFAndWebkitBrowser?: boolean;
+  // custom height of the screenshot
+  height?: number;
+};
+
+/**
+ * Skips tests for Firefox and Webkit browsers within a Playwright test suite.
+ *
+ * @param {string} - The message to display for skipped tests.
+ */
+export const skipFFAndWebkitBrowser = (
+  message = 'Tests skipped on FF & Webkit'
+) => {
+  test.skip(({ browserName }) => {
+    return browserName === 'firefox' || browserName === 'webkit';
+  }, message);
 };
 
 const BREAKPOINTS = [319, 320, 768, 1024, 1536];
@@ -76,8 +91,14 @@ const executeMediaQueryTests = async (
     scenario,
     shouldUseExtendedBreakpoints,
     testTitle,
+    shouldSkipFFAndWebkitBrowser,
     customBreakpoints,
+    height,
   } = options || {};
+
+  if (shouldSkipFFAndWebkitBrowser) {
+    skipFFAndWebkitBrowser();
+  }
 
   let selectedBreakpoints = BREAKPOINTS;
 
@@ -98,7 +119,9 @@ const executeMediaQueryTests = async (
       await page.goto(PAGE_URL, { waitUntil: 'networkidle' });
       await page.setViewportSize({
         width: breakpoint,
-        height: await page.evaluate(() => document.body.clientHeight),
+        height: height
+          ? height
+          : await page.evaluate(() => document.body.clientHeight),
       });
 
       if (scenario) {
@@ -112,4 +135,19 @@ const executeMediaQueryTests = async (
 
 test.describe('visual regression tests in different viewports', () => {
   executeMediaQueryTests();
+});
+
+test.describe('mobile menu', () => {
+  executeMediaQueryTests({
+    shouldSkipFFAndWebkitBrowser: true,
+    testTitle: `mobile menu`,
+    customBreakpoints: [320, 768],
+    height: 768,
+    scenario: async (page) => {
+      const menuButton = page.locator('button', { hasText: 'Menu' });
+      await menuButton.click();
+      // wait for Drawer to open
+      await page.waitForTimeout(100);
+    },
+  });
 });

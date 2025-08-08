@@ -9,10 +9,16 @@ import classNames from 'classnames';
 import styles from './MobileNavigation.module.scss';
 
 export function MobileNavigation() {
+  /**
+   * Example of a Mobile Menu where the
+   * DSButton variant navigation & DSLinkButton variant navigation from the DSHeader.MainNavigationArea,
+   * and DSActionButton & DSActionLink from the DSTopBar
+   * elements are moved into, on viewports < L (1024px).
+   */
   return (
-    <div className={styles.content}>
+    <div className={styles['mobile-menu-content']}>
       <nav aria-label='Main Navigation'>
-        <ul className={classNames(styles.list)}>
+        <ul className={styles['navigation-list--mobile']}>
           <li>
             <DSButton
               variant='navigation'
@@ -65,7 +71,12 @@ export function MobileNavigation() {
         </ul>
       </nav>
       <nav aria-label='Sub Navigation'>
-        <ul className={classNames(styles.list)}>
+        <ul className={styles['navigation-list--mobile']}>
+          {/* Horizontal divider, with aria-hidden="true" */}
+          <li
+            aria-hidden='true'
+            className={styles['horizontal-divider--mobile']}
+          />
           <li>
             <DSActionButton iconName='envelope' stretched={true}>
               Contact

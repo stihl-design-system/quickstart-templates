@@ -1,13 +1,15 @@
 @use '@stihl-design-system/components/styles/scss/ds';
 
 // Styles for the top bar navigation list
-.list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.navigation-list {
   display: flex;
   align-items: center;
   gap: ds.$spacing-8;
+
+  // reset native ul styles
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .vertical-divider {
@@ -17,8 +19,8 @@
   background-color: ds.$theme-light-border-color-tertiary;
 }
 
-// The burger menu button should only be visible on smaller devices.
-.burger-menu-btn {
+// The burger menu button should only be visible on on viewports < L (1024px)
+.only-mobile {
   display: block;
 
   @include ds.media-query-min('l') {
@@ -26,11 +28,24 @@
   }
 }
 
-// Hide some navigation list items on smaller devices
+// Hide some navigation list items on viewports < L (1024px)
 .only-desktop {
   display: none;
 
   @include ds.media-query-min('l') {
     display: block;
+  }
+}
+
+// styles for the DSDrawer used as a Mobile Menu
+.mobile-menu {
+  // The drawer has a maximum width of 328px and scales down if the width would exceed the safe-zone.
+  // We calculate the maximum content width by subtracting the safe zone (32px).
+  max-width: min(calc(100vw - ds.$spacing-32), 328px);
+
+  @include ds.media-query-min('m') {
+    // On breakpoint 'm' and above, the drawer width is fixed at 328px.
+    min-width: calc(328px);
+    max-width: calc(328px);
   }
 }
