@@ -78,7 +78,11 @@ export function MobileNavigation() {
             className={styles['horizontal-divider--mobile']}
           />
           <li>
-            <DSActionButton iconName='envelope' stretched={true}>
+            <DSActionButton
+              iconName='envelope'
+              numberIndicatorValue=''
+              stretched={true}
+            >
               Contact
             </DSActionButton>
           </li>
