@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
 import { AppSwitch } from '../AppSwitch/AppSwitch';
 import { MobileNavigation } from '../MobileNavigation/MobileNavigation';
+import { Account } from '../Account/Account';
 
 export function TopBarNavigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -51,6 +52,10 @@ export function TopBarNavigation() {
           {/* The Language and STIHL World button in the DSTopBar should only be visible on viewports >= L (1024px). */}
           <li className={styles['only-desktop']}>
             <AppSwitch />
+          </li>
+          {/* The Account button in the DSTopBar should only be visible on viewports >= L (1024px). */}
+          <li className={styles['only-desktop']}>
+            <Account />
           </li>
           {/* The burger menu button should only be visible on viewports < L (1024px). */}
           <li className={styles['only-mobile']}>
