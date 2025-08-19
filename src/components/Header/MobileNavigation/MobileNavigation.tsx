@@ -5,7 +5,6 @@ import {
   DSButton,
   DSLinkButton,
 } from '@stihl-design-system/components';
-import classNames from 'classnames';
 import styles from './MobileNavigation.module.scss';
 
 export function MobileNavigation() {
