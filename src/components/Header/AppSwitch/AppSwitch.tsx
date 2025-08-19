@@ -14,8 +14,12 @@ export function AppSwitch() {
   const [isAppPopoverOpen, setIsAppPopoverOpen] = useState(false);
 
   return (
-    <DSPopover placement='bottom-end'>
-      <DSPopover.Anchor onClick={() => setIsAppPopoverOpen((prev) => !prev)}>
+    <DSPopover
+      placement='bottom-end'
+      isOpen={isAppPopoverOpen}
+      onOpenChange={setIsAppPopoverOpen}
+    >
+      <DSPopover.Anchor onClick={() => setIsAppPopoverOpen(!isAppPopoverOpen)}>
         <DSActionButton
           iconName={'nine-squares'}
           iconPosition='top'

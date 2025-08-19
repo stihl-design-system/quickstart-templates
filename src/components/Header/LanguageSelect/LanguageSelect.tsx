@@ -13,9 +13,13 @@ export function LanguageSelect() {
   const [isLanguagePopoverOpen, setIsLanguagePopoverOpen] = useState(false);
 
   return (
-    <DSPopover placement='bottom-end'>
+    <DSPopover
+      placement='bottom-end'
+      isOpen={isLanguagePopoverOpen}
+      onOpenChange={setIsLanguagePopoverOpen}
+    >
       <DSPopover.Anchor
-        onClick={() => setIsLanguagePopoverOpen((prev) => !prev)}
+        onClick={() => setIsLanguagePopoverOpen(!isLanguagePopoverOpen)}
       >
         <DSActionButton
           iconPosition='top'
