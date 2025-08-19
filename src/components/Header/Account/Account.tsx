@@ -18,14 +18,14 @@ export function Account() {
           aria-label='Toggle account menu'
           className={styles['avatar-button']}
         >
-          {/* Just a decorative element. A screen reader user hearing "T T" would be pretty unhelpful. 
+          {/* Just a decorative element. A screen reader user hearing "M M" would be pretty unhelpful. 
             So we can set aria-hidden="true" to the avatar placeholder. */}
           <div className={styles.avatar} aria-hidden='true'>
             TT
           </div>
 
           {/* If there is an avatar image, use an image tag to display it instead of the avatar placeholder. */}
-          {/* <img src='path/to/avatar.jpg' alt='User Avatar of Tim Timber' className={styles.avatar} /> */}
+          {/* <img src='path/to/avatar.jpg' alt='User Avatar of Max Mustermann' className={styles.avatar} /> */}
         </DSActionButton>
       </DSPopover.Anchor>
       <DSPopover.Content>
@@ -36,21 +36,21 @@ export function Account() {
               id='account-name'
               className={styles['account-name']}
             >
-              Tim Timber
+              Max Mustermann
             </DSHeading>
             <DSLink href='#' variant='highlight'>
               Konto verwalten
             </DSLink>
           </div>
           <div>
-            {/* Just a decorative element. A screen reader user hearing "T T" would be pretty unhelpful. 
+            {/* Just a decorative element. A screen reader user hearing "M M" would be pretty unhelpful. 
               So we can set aria-hidden="true" to the avatar placeholder. */}
             <div className={styles.avatar} aria-hidden='true'>
-              TT
+              MM
             </div>
 
             {/* If there is an avatar image, use an image tag to display it instead of the avatar placeholder. */}
-            {/* <img src='path/to/avatar.jpg' alt='User Avatar of Tim Timber' className={styles.avatar} /> */}
+            {/* <img src='path/to/avatar.jpg' alt='User Avatar of Max Mustermann' className={styles.avatar} /> */}
           </div>
         </div>
         <div className={styles['horizontal-divider']} />

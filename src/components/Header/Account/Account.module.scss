@@ -64,6 +64,7 @@
     display: flex;
     flex-direction: column;
     gap: ds.$spacing-8;
+    align-items: start;
   }
 
   // The avatar has been modified to be larger and more prominent.
