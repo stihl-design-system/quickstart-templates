@@ -5,14 +5,14 @@ import {
   DSActionLink,
   DSDrawer,
 } from '@stihl-design-system/components';
-import styles from './TopBarNavigation.module.scss';
+import styles from './UtilityNavigation.module.scss';
 import { useState } from 'react';
 import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
 import { AppSwitch } from '../AppSwitch/AppSwitch';
 import { MobileNavigation } from '../MobileNavigation/MobileNavigation';
 import { Account } from '../Account/Account';
 
-export function TopBarNavigation() {
+export function UtilityNavigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (

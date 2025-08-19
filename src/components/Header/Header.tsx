@@ -9,7 +9,7 @@ import {
 } from '@stihl-design-system/components';
 import styles from './Header.module.scss';
 import { Hero } from './Hero/Hero';
-import { TopBarNavigation } from './TopBarNavigation/TopBarNavigation';
+import { UtilityNavigation } from './UtilityNavigation/UtilityNavigation';
 import { MainNavigation } from './MainNavigation/MainNavigation';
 
 export function Header() {
@@ -50,7 +50,7 @@ export function Header() {
             </form>
           </DSTopBar.PrimaryArea>
           <DSTopBar.SecondaryArea>
-            <TopBarNavigation />
+            <UtilityNavigation />
           </DSTopBar.SecondaryArea>
         </DSTopBar>
         <DSHeader.MainNavigationArea>
