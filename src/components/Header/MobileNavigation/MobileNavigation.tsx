@@ -16,7 +16,7 @@ export function MobileNavigation() {
    */
   return (
     <div className={styles['mobile-menu-content']}>
-      <nav aria-label='Main Navigation'>
+      <nav aria-label='Main'>
         <ul className={styles['navigation-list--mobile']}>
           <li>
             <DSButton
@@ -69,7 +69,7 @@ export function MobileNavigation() {
           </li>
         </ul>
       </nav>
-      <nav aria-label='Sub Navigation'>
+      <nav aria-label='Utility'>
         <ul className={styles['navigation-list--mobile']}>
           {/* Horizontal divider, with aria-hidden="true" */}
           <li

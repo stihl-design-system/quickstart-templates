@@ -10,7 +10,7 @@ import styles from './MainNavigation.module.scss';
 export function MainNavigation() {
   return (
     <DSScroller className={styles['main-navigation']}>
-      <nav aria-label='Main Navigation'>
+      <nav aria-label='Main'>
         <ul>
           <li>
             <DSButton
