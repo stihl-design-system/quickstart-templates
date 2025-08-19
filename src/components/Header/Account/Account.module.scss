@@ -1,0 +1,80 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+// Styles for the language selection list
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: ds.$spacing-4;
+}
+
+// Styles for the group headings in the language list.
+.list-heading {
+  @include ds.utility-small;
+  color: ds.$theme-light-content-color-secondary;
+  padding-block: ds.$spacing-6;
+  padding-inline: ds.$spacing-16;
+}
+
+.horizontal-divider {
+  height: 1px;
+  width: 100%;
+  background-color: ds.$theme-light-border-color-tertiary;
+  margin-block: ds.$spacing-6;
+}
+
+// We're using an ActionButton with slight modifications for the Account Avatar Button.
+.avatar-button {
+  padding-block-start: 6px;
+  padding-block-end: 6px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
+}
+
+// Styles for the avatar placeholder that is passed to the ActionButton.
+.avatar {
+  color: ds.$color-core-grey-deep;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: ds.$theme-light-background-color-secondary;
+  border: 1px solid ds.$theme-light-border-color-tertiary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Align with letter spacing of 5% in Figma.
+  letter-spacing: 0.05em;
+
+  @include ds.utility-medium-bold();
+}
+
+// Styles for the upper part of the account menu.
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  padding-inline: ds.$spacing-16;
+  padding-block: 10px;
+
+  &--left {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$spacing-8;
+  }
+
+  // The avatar has been modified to be larger and more prominent.
+  .avatar {
+    color: ds.$theme-light-content-color-primary;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    letter-spacing: 0px;
+    background-color: ds.$theme-light-background-color-brand;
+    @include ds.heading-large-uppercase();
+  }
+}
