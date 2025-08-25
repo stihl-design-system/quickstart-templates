@@ -2,20 +2,24 @@
 
 // Styles for the language selection list
 .list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: ds.$spacing-4;
+  min-width: 16.1875rem;
+
+  // reset native ul styles
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 // Styles for the group headings in the language list.
-.list-heading {
+.heading {
   @include ds.utility-small;
   color: ds.$theme-light-content-color-secondary;
   padding-block: ds.$spacing-6;
   padding-inline: ds.$spacing-16;
+  margin-block-end: ds.$spacing-4;
 }
 
 .filter-input {
@@ -23,8 +27,10 @@
 }
 
 .horizontal-divider {
-  height: 1px;
+  height: 0.0625rem; // 1px but in rem to cover font-size: 200%
   width: 100%;
   background-color: ds.$theme-light-border-color-tertiary;
-  margin-block: ds.$spacing-6;
+  // Horizontal divider normal got 6px block margin, but since in Figma it is all in one flex-container with
+  // 4px gap, and in code we don't do that, we need to add those 4px gap to our block margin.
+  margin-block: 10px;
 }

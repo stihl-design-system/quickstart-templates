@@ -2,43 +2,50 @@
 
 // Styles for the language selection list
 .list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: ds.$spacing-4;
+
+  // reset native ul styles
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 // Styles for the group headings in the language list.
-.list-heading {
+.list-heading,
+.version {
   @include ds.utility-small;
   color: ds.$theme-light-content-color-secondary;
   padding-block: ds.$spacing-6;
   padding-inline: ds.$spacing-16;
 }
 
+.version {
+  @include ds.utility-medium;
+}
+
 .horizontal-divider {
-  height: 1px;
+  height: 0.0625rem; // 1px but in rem to cover font-size: 200%
   width: 100%;
   background-color: ds.$theme-light-border-color-tertiary;
-  margin-block: ds.$spacing-6;
+  // Horizontal divider normal got 6px block margin, but since in Figma it is all in one flex-container with
+  // 4px gap, and in code we don't do that, we need to add those 4px gap to our block margin.
+  margin-block: 10px;
 }
 
 // We're using an ActionButton with slight modifications for the Account Avatar Button.
 .avatar-button {
-  padding-block-start: 6px;
-  padding-block-end: 6px;
-  padding-inline-start: 7px;
-  padding-inline-end: 7px;
+  padding-block: ds.$spacing-6;
+  padding-inline: 7px;
 }
 
 // Styles for the avatar placeholder that is passed to the ActionButton.
 .avatar {
   color: ds.$color-core-grey-deep;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
   background-color: ds.$theme-light-background-color-secondary;
   border: 1px solid ds.$theme-light-border-color-tertiary;
   display: flex;
@@ -56,7 +63,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 300px;
+  min-width: 18.75rem;
   padding-inline: ds.$spacing-16;
   padding-block: 10px;
 
@@ -69,13 +76,10 @@
 
   // The avatar has been modified to be larger and more prominent.
   .avatar {
-    color: ds.$theme-light-content-color-primary;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    border: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 1.875rem;
     letter-spacing: 0px;
-    background-color: ds.$theme-light-background-color-brand;
     @include ds.heading-large-uppercase();
   }
 }

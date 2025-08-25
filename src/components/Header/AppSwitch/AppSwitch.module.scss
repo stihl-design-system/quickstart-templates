@@ -2,12 +2,15 @@
 
 // Styles for the STIHL World Apps navigation list
 .list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: ds.$spacing-4;
+  min-width: 15.25rem;
+
+  // reset native ul styles
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 // Add some spacing to the app switch heading
@@ -18,7 +21,7 @@
 }
 
 .horizontal-divider {
-  height: 1px;
+  height: 0.0625rem; // 1px but in rem to cover font-size: 200%
   width: 100%;
   background-color: ds.$theme-light-border-color-tertiary;
   margin-block: ds.$spacing-6;

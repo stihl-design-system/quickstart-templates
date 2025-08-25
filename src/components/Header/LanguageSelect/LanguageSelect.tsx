@@ -41,7 +41,7 @@ export function LanguageSelect() {
           />
         </form>
         <div className={styles['horizontal-divider']} />
-        <h2 id='global-sites' className={styles['list-heading']}>
+        <h2 id='global-sites' className={styles['heading']}>
           Global Sites
         </h2>
         <ul aria-labelledby='global-sites' className={styles['list']}>
@@ -67,7 +67,7 @@ export function LanguageSelect() {
           </li>
         </ul>
         <div className={styles['horizontal-divider']} />
-        <h2 id='local-sites' className={styles['list-heading']}>
+        <h2 id='local-sites' className={styles['heading']}>
           Local Sites
         </h2>
         <ul aria-labelledby='local-sites' className={styles.list}>
