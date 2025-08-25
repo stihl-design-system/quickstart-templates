@@ -33,28 +33,8 @@ export function MobileNavigation() {
               iconName='chevron-right'
               iconPosition='right'
             >
-              Service
+              Accessoirs
             </DSButton>
-          </li>
-          <li>
-            <DSButton
-              variant='navigation'
-              iconName='chevron-right'
-              iconPosition='right'
-            >
-              Events
-            </DSButton>
-          </li>
-          <li>
-            <DSLinkButton
-              variant='navigation'
-              href='#'
-              iconName='arrow-out'
-              iconPosition='right'
-              target='_blank'
-            >
-              Professionals
-            </DSLinkButton>
           </li>
           <li>
             <DSLinkButton
