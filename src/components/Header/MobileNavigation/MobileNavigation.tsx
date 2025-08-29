@@ -16,6 +16,10 @@ export function MobileNavigation() {
    */
   return (
     <div className={styles['mobile-menu-content']}>
+      {/**
+       * Screen readers read this out as "Main, Navigation". So there is no need to add "Navigation" manually to the aria-label.
+       * Don't forget to translate it.
+       */}
       <nav aria-label='Main'>
         <ul className={styles['navigation-list--mobile']}>
           <li>
@@ -47,8 +51,13 @@ export function MobileNavigation() {
               Others
             </DSLinkButton>
           </li>
+          {/* ... other navigation elements move here from the DSHeader.MainNavigationArea */}
         </ul>
       </nav>
+      {/**
+       * Screen readers read this out as "Utility, Navigation". So there is no need to add "Navigation" manually to the aria-label.
+       * Don't forget to translate it.
+       */}
       <nav aria-label='Utility'>
         <ul className={styles['navigation-list--mobile']}>
           {/* Horizontal divider, with aria-hidden="true" */}
@@ -83,6 +92,7 @@ export function MobileNavigation() {
               STIHL World
             </DSActionButton>
           </li>
+          {/* ... other navigation elements move here from the DSTopBar Utility Navigation */}
         </ul>
       </nav>
     </div>

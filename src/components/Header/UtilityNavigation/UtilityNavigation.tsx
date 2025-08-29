@@ -17,7 +17,11 @@ export function UtilityNavigation() {
 
   return (
     <>
-      <nav aria-label='Top Bar Navigation'>
+      {/**
+       * Screen readers read this out as "Utility, Navigation". So there is no need to add "Navigation" manually to the aria-label.
+       * Don't forget to translate it.
+       */}
+      <nav aria-label='Utility'>
         <ul className={styles['navigation-list']}>
           <li className={styles['only-desktop']}>
             <DSActionLink

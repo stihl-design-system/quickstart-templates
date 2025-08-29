@@ -39,6 +39,10 @@ export const MainNavigation = ({
 
   return (
     <DSScroller className={mainNavigationClass}>
+      {/**
+       * Screen readers read this out as "Main, Navigation". So there is no need to add "Navigation" manually to the aria-label.
+       * Don't forget to translate it.
+       */}
       <nav aria-label='Main' {...rest}>
         <ul>
           <li>
