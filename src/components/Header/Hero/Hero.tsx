@@ -6,10 +6,10 @@ export function Hero() {
     <section className={styles['hero']}>
       <div className={styles['hero-image']}>
         <div className={styles['hero-image-title']}>
-          <DSTitle>Title component</DSTitle>
+          <DSTitle>STIHL Beispiel Webseite</DSTitle>
         </div>
       </div>
-      <DSTitle className={styles['title']}>Title component</DSTitle>
+      <DSTitle className={styles['title']}>STIHL Beispiel Webseite</DSTitle>
     </section>
   );
 }

@@ -17,6 +17,23 @@
   @include ds.grid;
 }
 
+.title {
+  // Places the title element in the predefined "main" column.
+  @include ds.grid-main-column;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-s;
+}
+
+.content {
+  @include ds.grid-main-column;
+
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
 .first-half {
   // Places the content in the predefined "first-half" column.
   @include ds.grid-first-half;

@@ -1,6 +1,5 @@
-import { DSHeading } from '@stihl-design-system/components';
+import { DSHeading, DSLinkButton } from '@stihl-design-system/components';
 import styles from './PromoSectionMain.module.scss';
-import { DSLinkButton } from '@stihl-design-system/components';
 
 export default function PromoSectionMain() {
   return (
@@ -8,7 +7,7 @@ export default function PromoSectionMain() {
       <div className={styles.main}>
         <div className={styles.content}>
           <DSHeading tag='h2' size='large-uppercase' className={styles.heading}>
-            Analytics scalability making training infrastructure
+            Newsletteranmeldung – Spare 20% bei deinem nächsten Einkauf
           </DSHeading>
 
           <DSLinkButton
@@ -17,7 +16,7 @@ export default function PromoSectionMain() {
             iconPosition='right'
             className={styles.link}
           >
-            Link
+            Jetzt anmelden
           </DSLinkButton>
         </div>
       </div>

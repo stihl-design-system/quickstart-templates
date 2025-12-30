@@ -5,12 +5,12 @@ import {
   DSActionLink,
   DSDrawer,
 } from '@stihl-design-system/components';
-import styles from './UtilityNavigation.module.scss';
 import { useState } from 'react';
-import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
-import { AppSwitch } from '../AppSwitch/AppSwitch';
-import { MobileNavigation } from '../MobileNavigation/MobileNavigation';
 import { Account } from '../Account/Account';
+import { AppSwitch } from '../AppSwitch/AppSwitch';
+import { LanguageSelect } from '../LanguageSelect/LanguageSelect';
+import { MobileNavigation } from '../MobileNavigation/MobileNavigation';
+import styles from './UtilityNavigation.module.scss';
 
 export function UtilityNavigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -31,7 +31,7 @@ export function UtilityNavigation() {
               iconName='envelope'
               numberIndicatorValue=''
             >
-              Contact
+              Kontakt
             </DSActionLink>
           </li>
           <li>
@@ -42,7 +42,7 @@ export function UtilityNavigation() {
               iconName='cart'
               numberIndicatorValue='5'
             >
-              Cart
+              Warenkorb
             </DSActionLink>
           </li>
           {/* The Language and STIHL World button in the DSTopBar should only be visible on viewports >= L (1024px). */}

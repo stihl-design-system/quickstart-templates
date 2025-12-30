@@ -1,4 +1,4 @@
-import { DSText, DSLink } from '@stihl-design-system/components';
+import { DSLink, DSText } from '@stihl-design-system/components';
 import styles from './Footer.module.scss';
 
 export function Footer() {
@@ -12,21 +12,21 @@ export function Footer() {
             size='medium'
             id='headline-col-1'
           >
-            Heading 1
+            Unternehmen
           </DSText>
           <nav aria-labelledby='headline-col-1'>
             <ul>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Über uns</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Presse</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Karriere</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>STIHL Markenshop</DSLink>
               </li>
             </ul>
           </nav>
@@ -38,21 +38,21 @@ export function Footer() {
             size='medium'
             id='headline-col-2'
           >
-            Heading 2
+            Online Shop
           </DSText>
           <nav aria-labelledby='headline-col-2'>
             <ul>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Zahlungsarten</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Versand und Lieferung</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Retourcenter</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Reklamation</DSLink>
               </li>
             </ul>
           </nav>
@@ -64,21 +64,21 @@ export function Footer() {
             size='medium'
             id='headline-col-3'
           >
-            Heading 3
+            Service
           </DSText>
           <nav aria-labelledby='headline-col-3'>
             <ul>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Häufig gestellte Fragen</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Kontakt</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Newsletter</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Produktsupport</DSLink>
               </li>
             </ul>
           </nav>
@@ -90,21 +90,21 @@ export function Footer() {
             size='medium'
             id='headline-col-4'
           >
-            Heading 4
+            Rechtliches
           </DSText>
           <nav aria-labelledby='headline-col-4'>
             <ul>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>AGB</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Datenschutz</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Impressum</DSLink>
               </li>
               <li>
-                <DSLink href='#'>Link</DSLink>
+                <DSLink href='#'>Cookies</DSLink>
               </li>
             </ul>
           </nav>

@@ -7,8 +7,8 @@ import {
   DSLinkButton,
   DSPopover,
 } from '@stihl-design-system/components';
-import styles from './AppSwitch.module.scss';
 import { useState } from 'react';
+import styles from './AppSwitch.module.scss';
 
 export function AppSwitch() {
   const [isAppPopoverOpen, setIsAppPopoverOpen] = useState(false);
@@ -46,7 +46,7 @@ export function AppSwitch() {
               iconPosition='left'
               stretched={true}
             >
-              STIHL Website
+              STIHL Webseite
             </DSActionLink>
           </li>
           <li>
@@ -90,7 +90,7 @@ export function AppSwitch() {
               iconPosition='left'
               stretched={true}
             >
-              Product Advisor
+              Produktempfehlung
             </DSActionLink>
           </li>
           <li aria-hidden='true' className={styles['horizontal-divider']}></li>
@@ -101,7 +101,7 @@ export function AppSwitch() {
               iconPosition='right'
               iconName='arrow-out'
             >
-              All Services & Apps
+              Alle Services
             </DSLinkButton>
           </li>
         </ul>

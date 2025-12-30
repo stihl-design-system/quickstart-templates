@@ -17,37 +17,19 @@
   @include ds.grid;
 }
 
-.first-third {
-  // Places the content in the predefined "first-third" column.
-  @include ds.grid-first-third;
+.list {
+  @include ds.grid-main-column;
+  display: grid;
+  // Create a responsive grid with a minimum card width of 330px.
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: ds.$spacing-24;
+
+  // Remove default list styles
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.second-third {
-  // Places the content in the predefined "one-third" column.
-  @include ds.grid-span-one-third;
-}
-
-.third-third {
-  // Places the content in the predefined "one-third" column.
-  // This must be set to true on every third item of that type (i.e. 3rd third or 3rd quarter)
-  // to ensure it behaves like a first-third (for viewports ≥ M and < L) or first-quarter (for viewports < L),
-  // causing it to start a new row when the previous columns overflow.
-  // See Grid docs for more information.
-  @include ds.grid-span-one-third($isThirdItem: true);
-}
-
-.image {
-  // Ensures the image scales proportionally even when the width & height is set in the <img>
-  // element.
-  height: auto;
-
-  margin-block-end: ds.$spacing-32;
-}
-
-.heading {
-  margin-block-end: ds.$spacing-16;
-}
-
-.link {
-  margin-block-start: ds.$spacing-16;
+.card {
+  height: 100%;
 }

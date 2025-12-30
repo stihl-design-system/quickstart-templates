@@ -62,7 +62,7 @@ export const MainNavigation = ({
                     setOpenMenu(openMenu === 'products' ? null : 'products')
                   }
                 >
-                  Products
+                  Produkte
                 </DSButton>
               </DSMegaMenu.Anchor>
               <DSMegaMenu.Content>
@@ -89,7 +89,7 @@ export const MainNavigation = ({
                     )
                   }
                 >
-                  Accessories
+                  Zubehör
                 </DSButton>
               </DSMegaMenu.Anchor>
               <DSMegaMenu.Content>
@@ -106,7 +106,7 @@ export const MainNavigation = ({
               iconPosition='right'
               target='_blank'
             >
-              Others
+              Weiteres
             </DSLinkButton>
           </li>
         </ul>
@@ -124,22 +124,22 @@ export const MegaMenuContentExample = ({
 }): JSX.Element => {
   const subMenuItems = {
     products: [
-      'Sawing and cutting',
-      'Mowing and planting',
-      'Cleaning and clearing',
-      'Garden size',
-      'Offers and promotions',
-      'Merchandise',
-      'All products',
+      'Sägen und Schneiden',
+      'Mähen und Pflanzen',
+      'Reinigen und Räumen',
+      'Gartengröße',
+      'Angebote und Aktionen',
+      'Fanartikel',
+      'Alle Produkte',
     ],
     accessories: [
-      'STIHL sustainability strategy',
-      'Education and people',
-      'Economic sustainability',
-      'Social engagement',
-      'Climate strategy',
-      'Environmental protection',
-      'STIHL and the rainforest',
+      'STIHL Nachhaltigkeitsstrategie',
+      'Bildung und Menschen',
+      'Ökonomische Nachhaltigkeit',
+      'Soziales Engagement',
+      'Klimastrategie',
+      'Umweltschutz',
+      'STIHL und der Regenwald',
     ],
   };
 

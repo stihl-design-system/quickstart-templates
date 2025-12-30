@@ -6,8 +6,8 @@ import {
   DSInputSearch,
   DSPopover,
 } from '@stihl-design-system/components';
-import styles from './LanguageSelect.module.scss';
 import { useState } from 'react';
+import styles from './LanguageSelect.module.scss';
 
 export function LanguageSelect() {
   const [isLanguagePopoverOpen, setIsLanguagePopoverOpen] = useState(false);
@@ -26,15 +26,15 @@ export function LanguageSelect() {
           iconName='globe'
           chevronDirection={isLanguagePopoverOpen ? 'up' : 'down'}
         >
-          Language
+          Sprache
         </DSActionButton>
       </DSPopover.Anchor>
       <DSPopover.Content>
         <form id='language-search' role='search'>
           <DSInputSearch
             id='language-filter'
-            label='Search Language'
-            placeholder='Search Language'
+            label='Sprache suchen'
+            placeholder='Sprache suchen'
             hideLabel={true}
             size='small'
             className={styles['filter-input']}
@@ -68,7 +68,7 @@ export function LanguageSelect() {
         </ul>
         <div className={styles['horizontal-divider']} />
         <h2 id='local-sites' className={styles['heading']}>
-          Local Sites
+          Lokale Seiten
         </h2>
         <ul aria-labelledby='local-sites' className={styles.list}>
           <li>

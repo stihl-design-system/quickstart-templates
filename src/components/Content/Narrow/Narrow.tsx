@@ -10,11 +10,11 @@ import {
   DSNotification,
   DSRadioGroup,
   DSSlider,
+  DSText,
   DSTextarea,
 } from '@stihl-design-system/components';
-import styles from './Narrow.module.scss';
-import { DSText } from '@stihl-design-system/components';
 import classNames from 'classnames';
+import styles from './Narrow.module.scss';
 
 export default function Narrow() {
   const COUNTRIES: ComboboxOptionsOrOptGroups = [
@@ -25,40 +25,42 @@ export default function Narrow() {
     <section className={styles.section}>
       <div className={styles.narrow}>
         <DSHeading tag='h2' size='large-uppercase' className={styles.heading}>
-          Infrastructure voluptate elit amet ex ecosystem
+          Baumkletterer – Königsdisziplin bei der Baumpflege
         </DSHeading>
         {/* Consider using srcset, sizes, and/or the <picture> element to optimize your images for all screen sizes and ensure the best performance. */}
         <img
           src='/quickstart-templates/content-image-012.webp'
-          alt='A professional arborist wearing safety gear and a helmet is secured with ropes while working high in a tree in a dense forest. A STIHL battery-powered chainsaw hangs from their harness as they prepare for tree maintenance.'
+          alt='Mann mit Kletterausrüstung und Ketten im   
+Baum.'
           width={688}
           height={387}
           className={styles.image}
         />
 
         <DSText className='max-text-width'>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          Baumklettern gilt als Königsdisziplin der Baumpflege – hier sind
+          Können, Präzision und Vertrauen gefragt. In luftiger Höhe entscheidet
+          jede Bewegung über Sicherheit und Effizienz. Profis setzen auf
+          modernste Technik und durchdachte Ausrüstung, um selbst
+          anspruchsvollste Aufgaben zu meistern. Dabei geht es nicht nur um das
+          Schneiden, sondern um den Erhalt und die Pflege wertvoller Bäume.
+          STIHL unterstützt Baumkletterer mit leistungsstarken Geräten, die
+          speziell für den Einsatz in der Höhe entwickelt wurden. So wird aus
+          einer Herausforderung ein perfektes Zusammenspiel von Mensch, Technik
+          und Natur.
         </DSText>
 
         <form className={classNames(styles.form, 'max-text-width')}>
           <DSFieldset
             legend={{
-              headingText: 'Fieldset Heading 3',
+              headingText: 'Anmeldeformular',
               headingTag: 'h3',
               headingSize: 'medium',
             }}
             className={styles.fieldset}
           >
             <DSNotification>
-              This is an example inline notification.
+              Sie können sich jederzeit wieder abmelden.
             </DSNotification>
             <DSText
               size='medium'
@@ -66,31 +68,31 @@ export default function Narrow() {
               aria-hidden='true'
               className={styles['mandatory-information']}
             >
-              *Mandatory Information
+              *Pflichtfelder
             </DSText>
-            <DSCheckbox name='business' label='I am a business client' />
+            <DSCheckbox name='business' label='Ich bin ein Geschäftskunde' />
             <DSRadioGroup
-              legend='Title'
+              legend='Anrede'
               name='title'
               direction='horizontal'
               options={[
-                { value: 'mr', label: 'Mr.' },
-                { value: 'mrs', label: 'Mrs.' },
-                { value: 'other', label: 'other' },
+                { value: 'mr', label: 'Herr' },
+                { value: 'mrs', label: 'Frau' },
+                { value: 'other', label: 'Andere' },
               ]}
               required
             />
             <DSInput
-              id='surname-input'
-              name='surname'
-              label='Surname'
+              id='firstname-input'
+              name='firstname'
+              label='Vorname'
               required={true}
               autoComplete='given-name'
             />
             <DSInput
-              id='name-input'
-              name='name'
-              label='Name'
+              id='lastname-input'
+              name='lastname'
+              label='Nachname'
               required={true}
               autoComplete='family-name'
             />
@@ -105,7 +107,7 @@ export default function Narrow() {
             <DSCombobox
               id='country-combobox'
               name='country'
-              label='Country'
+              label='Land'
               required={true}
               autoComplete='country-name'
               options={COUNTRIES}
@@ -118,27 +120,30 @@ export default function Narrow() {
             <DSTextarea
               name='notes'
               id='additional-notes'
-              label='Additional notes (optional)'
-              hint='Do you have any additional notes for us?'
+              label='Zusätzliche Anmerkungen (optional)'
+              hint='Haben Sie zusätzliche Anmerkungen für uns?'
               maxLength={500}
             />
           </DSFieldset>
           <DSCheckboxGroup
             id='terms-conditions'
-            legend={{ headingText: 'Terms of Service', headingSize: 'small' }}
-            description='By accessing this website we assume you accept these terms and conditions. Do not continue to use Website Name if you do not agree to take all of the terms and conditions stated on this page.'
+            legend={{
+              headingText: 'Nutzungsbedingungen',
+              headingSize: 'small',
+            }}
+            description='Durch den Zugriff auf diese Website gehen wir davon aus, dass Sie diese Nutzungsbedingungen akzeptieren. Wenn Sie nicht zustimmen, diese Nutzungsbedingungen vollständig zu akzeptieren, nutzen Sie die Website bitte nicht weiter.'
             className={styles.fieldset}
             required={true}
-            systemFeedback='You must accept the terms of service to continue using this website'
+            systemFeedback='Sie müssen die Nutzungsbedingungen akzeptieren, um diese Website weiterhin nutzen zu können.'
           >
             <DSCheckbox
               name='terms-conditions'
-              label='Accept Terms and Conditions'
+              label='Nutzungsbedingungen akzeptieren'
               required={true}
             />
           </DSCheckboxGroup>
           <div className={styles.actions}>
-            <DSButton variant='highlight'>Submit</DSButton>
+            <DSButton variant='highlight'>Absenden</DSButton>
           </div>
         </form>
       </div>

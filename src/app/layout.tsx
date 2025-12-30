@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
-import './globals.scss';
-import {
-  getResetStyles,
-  getSSRStyles,
-} from '@stihl-design-system/components/partials';
 import {
   DSAriaLiveRegions,
   DSSkipToContent,
   DSToastProvider,
 } from '@stihl-design-system/components';
-import { Header } from '../components/Header/Header';
+import {
+  getResetStyles,
+  getSSRStyles,
+} from '@stihl-design-system/components/partials';
+import type { Metadata } from 'next';
 import { Footer } from '../components/Footer/Footer';
+import { Header } from '../components/Header/Header';
+import './globals.scss';
 
 export const metadata: Metadata = {
   title: 'STIHL Quickstart Template',
@@ -63,7 +63,7 @@ export default function RootLayout({
           Skip to content link - default targetElementId is set to "main". When activated, page scrolls to <main id="main" />
           See reference: https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/components-skip-to-content-link--documentation
         */}
-          <DSSkipToContent />
+          <DSSkipToContent>Zum Inhaltsbereich springen</DSSkipToContent>
 
           {/*
           Aria live regions component to announce updates to screen readers. (used by components like DSToast)
