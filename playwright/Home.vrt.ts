@@ -116,7 +116,7 @@ const executeMediaQueryTests = async (
       // Needs to be set for proper screen height
       await page.setViewportSize({ width: breakpoint, height: 1 });
 
-      await page.goto(PAGE_URL, { waitUntil: 'networkidle' });
+      await page.goto(PAGE_URL, { waitUntil: 'domcontentloaded' });
       await page.setViewportSize({
         width: breakpoint,
         height: height
