@@ -30,6 +30,7 @@ export function UtilityNavigation() {
               iconPosition='top'
               iconName='envelope'
               numberIndicatorValue=''
+              numberIndicatorAriaLabel='You have new messages'
             >
               Contact
             </DSActionLink>
@@ -41,6 +42,7 @@ export function UtilityNavigation() {
               iconPosition='top'
               iconName='cart'
               numberIndicatorValue='5'
+              numberIndicatorAriaLabel='You have 5 items in your cart'
             >
               Cart
             </DSActionLink>

@@ -69,6 +69,7 @@ export function MobileNavigation() {
             <DSActionButton
               iconName='envelope'
               numberIndicatorValue=''
+              numberIndicatorAriaLabel='You have new messages'
               stretched={true}
             >
               Contact
