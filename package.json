@@ -8,7 +8,7 @@
     "build": "next build",
     "build:test": "NODE_ENV=test next build",
     "start": "serve -c serve.json",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test:a11y": "npx playwright test --config=playwright.config.a11y.ts",
     "test:vrt": "npx playwright test --config=playwright.config.vrt.ts"
   },
