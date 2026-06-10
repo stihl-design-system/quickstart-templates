@@ -10,8 +10,12 @@
 // Styling for the search input form wrapper
 .input-search-form {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
+
+  @include ds.media-query-min('m') {
+    display: flex;
+  }
 }
 
 // Custom styling for the input search component to match the design

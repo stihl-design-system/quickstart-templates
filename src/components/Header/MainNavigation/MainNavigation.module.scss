@@ -39,9 +39,6 @@
 .mega-menu-content-left {
   padding-block-start: ds.$spacing-24;
   overflow-y: auto;
-  // set max-height to make the content scrollable
-  // subtract the padding block from the maximum height of the MegaMenu
-  max-height: calc(640px - ds.$spacing-14);
   // prevent focus outline of items to be cut off on the left and right
   margin-inline: -(ds.$spacing-2);
   padding-inline-start: ds.$spacing-2;
@@ -53,9 +50,6 @@
   overflow-y: auto;
   padding-block-start: ds.$spacing-24;
   padding-inline: ds.$spacing-40;
-  // set max-height to make the content scrollable
-  // subtract the padding block from the maximum height of the MegaMenu
-  max-height: calc(640px - ds.$spacing-14);
 }
 
 .mega-menu-placeholder {
