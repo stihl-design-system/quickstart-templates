@@ -1,5 +1,5 @@
 @use '@stihl-design-system/components/styles/scss/ds';
-@import '@stihl-design-system/components/styles/fonts';
+@use '@stihl-design-system/components/styles/fonts';
 
 // Since the STIHL Design System have a CSS Layer called 'ds-reset' around the reset styles,
 // we can use the @layer directive to ensure that our custom styles are applied after the reset styles
