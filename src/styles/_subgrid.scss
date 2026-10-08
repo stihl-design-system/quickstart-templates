@@ -1,0 +1,47 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+
+// **************************************************************
+// The "subgrid" approach to the STIHL Design System Grid.
+//
+// In the row-based approach (see /src/components/Content/*) every module is its
+// own grid container: each <section> includes `ds.grid` and therefore builds a
+// fresh set of column tracks that happens to match the one of its siblings.
+//
+// With subgrid the page wrapper is the only element that includes `ds.grid`.
+// Every module below opts into those very same tracks instead of recreating
+// them. Including this mixin does two things:
+//
+//   1. `ds.grid-full-column` makes the module span every column track of the
+//      page grid, from `full-start` to `full-end`.
+//   2. `grid-template-columns: subgrid` adopts those tracks instead of defining
+//      new ones - including all line names (`main-start`, `narrow-left-start`,
+//      `extended-end`, ...) and the column gap of the page grid.
+//
+// The payoff: the children of a module keep using the exact same DS column
+// mixins as in the row-based approach (`ds.grid-main-column`,
+// `ds.grid-span-one-third`, ...), but they are now placed on the page grid
+// itself. Columns stay aligned across module boundaries even when a module adds
+// its own nesting level.
+//
+// See /src/components/Header/Hero/Hero.module.scss for the DS grid basics and
+// the full grid documentation at:
+// https://main--63440bbb95889041542a5ba3.chromatic.com/?path=/docs/styles-grid-grid--documentation
+// **************************************************************
+@mixin section {
+  // Span all column tracks of the page grid ...
+  @include ds.grid-full-column;
+
+  // ... and reuse them instead of creating new ones.
+  display: grid;
+  grid-template-columns: subgrid;
+
+  // Only the column axis is subgridded, so the row gap has to be declared
+  // explicitly. `--ds-grid-gap` is inherited from the page grid, which keeps
+  // wrapping modules (thirds, quarters) in sync with the row-based layout.
+  row-gap: var(--ds-grid-gap);
+
+  // Mirrors the overflow protection that `ds.grid` applies to its own children.
+  > * {
+    min-inline-size: 0;
+  }
+}
