@@ -1,6 +1,6 @@
 #!/bin/bash
 
 IMAGE=playwright
-TAG=v1.60.0-noble-vrt-quick-start
+TAG=v1.64.0-noble-vrt-quick-start
 
 docker build -f Dockerfile -t $IMAGE:$TAG -t $IMAGE:latest .

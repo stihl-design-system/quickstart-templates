@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.60.0-noble
+FROM mcr.microsoft.com/playwright:v1.64.0-noble
 
 ENV PATH="/opt/quickstart-templates/bin:${PATH}"
 
