@@ -10,11 +10,11 @@ import {
   DSNotification,
   DSRadioGroup,
   DSSlider,
+  DSText,
   DSTextarea,
 } from '@stihl-design-system/components';
-import styles from './Narrow.module.scss';
-import { DSText } from '@stihl-design-system/components';
 import classNames from 'classnames';
+import styles from './Narrow.module.scss';
 
 export default function Narrow() {
   const COUNTRIES: ComboboxOptionsOrOptGroups = [
@@ -81,16 +81,16 @@ export default function Narrow() {
               required
             />
             <DSInput
-              id='surname-input'
-              name='surname'
-              label='Surname'
+              id='first-name-input'
+              name='first-name'
+              label='First Name'
               required={true}
               autoComplete='given-name'
             />
             <DSInput
-              id='name-input'
-              name='name'
-              label='Name'
+              id='last-name-input'
+              name='last-name'
+              label='Last Name'
               required={true}
               autoComplete='family-name'
             />

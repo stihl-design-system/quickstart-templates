@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import { createHtmlReport } from 'axe-html-reporter';
 
-const PAGES_TO_TEST = ['/'];
+const PAGES_TO_TEST = ['/', '/subgrid-layout'];
 
 test.describe('Next.js App Accessibility Tests', () => {
   for (const pagePath of PAGES_TO_TEST) {
@@ -10,7 +10,12 @@ test.describe('Next.js App Accessibility Tests', () => {
       page,
       browserName,
     }) => {
-      await page.goto(`http://localhost:3000${pagePath}`);
+      // Wait for the STIHL Design System web components to be defined and
+      // upgraded. Scanning earlier reports contrast violations on markup that
+      // is still unstyled.
+      await page.goto(`http://localhost:3000${pagePath}`, {
+        waitUntil: 'networkidle',
+      });
 
       const accessibilityScanResults = await new AxeBuilder({ page })
         .options({

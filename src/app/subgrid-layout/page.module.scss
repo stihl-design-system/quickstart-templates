@@ -1,0 +1,40 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+@use '../../styles/subgrid';
+
+.page {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  padding-block-start: ds.$spacing-dynamic-xl;
+  padding-block-end: ds.$spacing-dynamic-xxl;
+
+  // **************************************************************
+  // This is the only element on the page that initializes a grid. Every module
+  // below hooks into these tracks via subgrid.
+  // See /src/styles/_subgrid.scss for the pattern.
+  // **************************************************************
+  @include ds.grid;
+
+  // The vertical rhythm between the modules is owned by the modules themselves
+  // (`margin-block-end`), just like in the row-based layout. Without this the
+  // page grid would add an extra row gap between them.
+  row-gap: 0;
+}
+
+.row {
+  // In the subgrid approach a section does not build its own grid, it reuses the
+  // one of the page wrapper.
+  @include subgrid.section;
+}
+
+.title {
+  // Places the title element in the predefined "main" column.
+  // Identical to the row-based layout - the mixin does not care whether the
+  // surrounding grid is an own grid or a subgrid.
+  @include ds.grid-main-column;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-m;
+}

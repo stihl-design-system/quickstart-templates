@@ -1,0 +1,48 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+@use '../../../styles/subgrid';
+
+.section {
+  // **************************************************************
+  // Subgrid variant of /src/components/Content/Narrow/Narrow.module.scss.
+  // Instead of `@include ds.grid` the section reuses the column tracks of the
+  // page grid. See /src/styles/_subgrid.scss.
+  // **************************************************************
+  @include subgrid.section;
+}
+
+.narrow {
+  // Places the content in the predefined "narrow-center" column.
+  @include ds.grid-narrow-center-column;
+}
+
+.image {
+  // Ensures the image scales proportionally even when the width & height is set in the <img>
+  // element.
+  height: auto;
+
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-l;
+}
+
+.heading {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-m;
+}
+
+.form {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-start: ds.$spacing-dynamic-l;
+}
+
+.fieldset {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-s;
+}

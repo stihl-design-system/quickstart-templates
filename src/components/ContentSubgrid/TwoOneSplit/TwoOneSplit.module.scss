@@ -1,0 +1,41 @@
+@use '@stihl-design-system/components/styles/scss/ds';
+@use '../../../styles/subgrid';
+
+.section {
+  // Using dynamic-spacing token here to ensure consistent spacing across breakpoints.
+  // This removes the need to adjust the spacing values manually with media queries in
+  // the application's stylesheets.
+  margin-block-end: ds.$spacing-dynamic-m;
+
+  // **************************************************************
+  // Subgrid variant of /src/components/Content/TwoOneSplit/TwoOneSplit.module.scss.
+  // Instead of `@include ds.grid` the section reuses the column tracks of the
+  // page grid. See /src/styles/_subgrid.scss.
+  // **************************************************************
+  @include subgrid.section;
+}
+
+.first-two-thirds {
+  // Ensures the image scales proportionally even when the width & height is set in the <img>
+  // element.
+  height: auto;
+
+  // Places the content in the predefined "first-two-thirds" column.
+  @include ds.grid-first-two-thirds;
+}
+
+.one-third {
+  // Places the content in the predefined "one-third" column.
+  @include ds.grid-span-one-third;
+}
+
+.heading {
+  margin-block-end: ds.$spacing-16;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block-start: ds.$spacing-16;
+}
