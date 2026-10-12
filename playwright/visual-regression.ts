@@ -56,6 +56,75 @@ export const skipFFAndWebkitBrowser = (
 const BREAKPOINTS = [319, 320, 768, 1024, 1536];
 const BREAKPOINTS_EXTENDED = [1668, 1920, 2560];
 const BASE_URL = 'http://localhost:3000';
+const STABLE_PAGE_TIMEOUT = 10000;
+
+/**
+ * Waits for rendering work that `networkidle` does not cover and that makes
+ * screenshots flaky (especially in Webkit): pending web fonts, images that are
+ * not yet loaded/decoded and DSIcon placeholders whose SVG is still being
+ * imported lazily. Only elements intersecting the viewport are awaited, since
+ * the lazy loaders never pick up hidden, off-screen or clipped ones.
+ *
+ * The wait is bounded: content that never settles (e.g. an icon that fails to
+ * import) should surface as a screenshot diff, not as a test timeout.
+ */
+export const waitForStablePage = async (page: Page): Promise<void> => {
+  const hasSettled = await page
+    .waitForFunction(
+      () =>
+        new Promise<boolean>((resolve) => {
+          if (document.fonts.status !== 'loaded') {
+            resolve(false);
+            return;
+          }
+
+          const pendingElements = [
+            ...Array.from(
+              document.querySelectorAll('div[class*="ds-icon_image_"]')
+            ),
+            ...Array.from(document.images).filter((image) => !image.complete),
+          ];
+          if (pendingElements.length === 0) {
+            resolve(true);
+            return;
+          }
+
+          // An IntersectionObserver respects clipping ancestors, which a
+          // bounding-rect check does not. Same rootMargin as DSIcon.
+          const observedEntries: IntersectionObserverEntry[] = [];
+          const observer = new IntersectionObserver(
+            (entries) => {
+              observedEntries.push(...entries);
+              if (observedEntries.length < pendingElements.length) {
+                return;
+              }
+              observer.disconnect();
+              resolve(observedEntries.every((entry) => !entry.isIntersecting));
+            },
+            { rootMargin: '200px 0px' }
+          );
+          pendingElements.forEach((element) => observer.observe(element));
+        }),
+      undefined,
+      { polling: 100, timeout: STABLE_PAGE_TIMEOUT }
+    )
+    .then(() => true)
+    .catch(() => false);
+
+  // `document.fonts.ready` would hang on the very font that did not settle above.
+  if (!hasSettled) {
+    return;
+  }
+
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all(
+      Array.from(document.images)
+        .filter((image) => image.complete && image.naturalWidth > 0)
+        .map((image) => image.decode().catch(() => undefined))
+    );
+  });
+};
 
 /**
  * Take a screenshot with disabled animations and an YIQ color space threshold of 0.2
@@ -69,6 +138,7 @@ const takeScreenshot = async (
   title: string,
   screenshotOptions?: ScreenshotOptions
 ) => {
+  await waitForStablePage(page);
   return expect(page).toHaveScreenshot(`${title}.png`, {
     animations: 'disabled',
     threshold: 0.1,
@@ -123,6 +193,7 @@ export const captureBreakpoint = async (
   await page.setViewportSize({ width: breakpoint, height: 1 });
 
   await page.goto(`${BASE_URL}${pagePath}`, { waitUntil: 'networkidle' });
+  await waitForStablePage(page);
   await page.setViewportSize({
     width: breakpoint,
     height: height
